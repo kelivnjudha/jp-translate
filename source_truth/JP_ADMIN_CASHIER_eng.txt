@@ -1,0 +1,126 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+cashier.header.eyebrow | CASHIER | JP Admin / Cashier screens | Section eyebrow.
+cashier.scan.error.enter_code | Enter a code to search. | JP Admin / Cashier / Product Scan | Validation message.
+cashier.scan.error.config | App configuration is missing. Contact admin. | JP Admin / Cashier / Product Scan | Do not expose config key names.
+cashier.scan.error.session | Your session expired. Please sign in again. | JP Admin / Cashier / Product Scan | Re-auth guidance.
+cashier.scan.error.cannot_sell | This product cannot be sold. | JP Admin / Cashier / Product Scan | Product unavailable fallback.
+cashier.scan.camera.title | Camera permission needed | JP Admin / Cashier / Product Scan | Camera permission title.
+cashier.scan.camera.allow | ALLOW CAMERA | JP Admin / Cashier / Product Scan | Permission button.
+cashier.scan.camera.settings | OPEN SETTINGS | JP Admin / Cashier / Product Scan | Device settings button.
+cashier.scan.manual | ENTER CODE MANUALLY | JP Admin / Cashier / Product Scan | Manual entry button.
+cashier.scan.product_code | PRODUCT CODE | JP Admin / Cashier / Product Scan | Field label.
+cashier.scan.product_placeholder | Enter SKU or product code | JP Admin / Cashier / Product Scan | Product code placeholder.
+cashier.scan.find | FIND PRODUCT | JP Admin / Cashier / Product Scan | Submit action.
+cashier.scan.looking_up | Looking up… | JP Admin / Cashier / Product Scan | Busy state.
+cashier.scan.dismiss | Dismiss | JP Admin / Cashier / Product Scan | Error dismiss action.
+cashier.scan.scan_another | SCAN ANOTHER | JP Admin / Cashier / Product Scan | Scan another action.
+cashier.scan.status.available | AVAILABLE | JP Admin / Cashier / Product Scan | Availability chip.
+cashier.scan.status.sold | SOLD | JP Admin / Cashier / Product Scan | Availability chip.
+cashier.scan.status.archived | ARCHIVED | JP Admin / Cashier / Product Scan | Availability chip.
+cashier.scan.status.needs_review | NEEDS REVIEW | JP Admin / Cashier / Product Scan | Availability chip.
+cashier.scan.status.wrong_branch | WRONG BRANCH | JP Admin / Cashier / Product Scan | Advisory branch mismatch chip.
+cashier.cart.error.missing_id | Sale draft id is missing. | JP Admin / Cashier / Cart | Route param missing.
+cashier.cart.error.not_found | This sale draft could not be found. | JP Admin / Cashier / Cart | Missing draft.
+cashier.cart.error.not_open | This sale draft is no longer open. Start a new draft to take payment. | JP Admin / Cashier / Cart | Draft lifecycle state.
+cashier.cart.error.expired | This sale draft has expired. | JP Admin / Cashier / Cart | Draft expired.
+cashier.cart.error.forbidden | You do not have access to this sale draft. | JP Admin / Cashier / Cart | Access denial.
+cashier.cart.error.route_missing | Cashier API route is not available. Check API deployment. | JP Admin / Cashier / Cart | Ops-oriented user-visible error.
+cashier.cart.error.api_unavailable | Could not reach Jade Palace API. Check connection and try again. | JP Admin / Cashier / Cart | Network/API error.
+cashier.cart.error.malformed | JP Admin received an unexpected server response. | JP Admin / Cashier / Cart | Malformed payload.
+cashier.cart.loading | Loading sale draft... | JP Admin / Cashier / Cart | Busy state.
+cashier.cart.error_title | Could not load sale draft | JP Admin / Cashier / Cart | Error card title.
+cashier.cart.retry | RETRY | JP Admin / Cashier / Cart | Retry action.
+cashier.cart.empty.title | No products added yet | JP Admin / Cashier / Cart | Empty cart title.
+cashier.cart.scan_product | SCAN PRODUCT | JP Admin / Cashier / Cart | Empty cart action.
+cashier.cart.scan_another_product | SCAN ANOTHER PRODUCT | JP Admin / Cashier / Cart | Add another product action.
+cashier.cart.cancel_sale | Cancel sale | JP Admin / Cashier / Cart | Sale draft cancel action.
+cashier.cart.continue_payment | CONTINUE TO PAYMENT | JP Admin / Cashier / Cart | Payment entry action.
+cashier.cart.remove_product | Remove product from sale | JP Admin / Cashier / Cart | Remove item action.
+cashier.customer.error.enter_id | Enter a Customer ID to look up. | JP Admin / Cashier / Customer Scan | Validation.
+cashier.customer.error.cart_missing | This sale draft could not be found. | JP Admin / Cashier / Customer Scan | Missing draft.
+cashier.customer.camera.title | Camera access required | JP Admin / Cashier / Customer Scan | Camera permission title.
+cashier.customer.enable_camera | ENABLE CAMERA | JP Admin / Cashier / Customer Scan | Permission button.
+cashier.customer.open_settings | OPEN SETTINGS | JP Admin / Cashier / Customer Scan | Device settings button.
+cashier.customer.enter_manual | ENTER MANUALLY | JP Admin / Cashier / Customer Scan | Manual entry.
+cashier.customer.id_label | CUSTOMER ID | JP Admin / Cashier / Customer Scan | Field label.
+cashier.customer.id_placeholder | JPCUST-XXXXXXXXXX | JP Admin / Cashier / Customer Scan | Stable customer ID pattern.
+cashier.customer.lookup_loading | Looking up Customer ID… | JP Admin / Cashier / Customer Scan | Busy state.
+cashier.customer.lookup_failed | Customer ID lookup failed | JP Admin / Cashier / Customer Scan | Error title.
+cashier.customer.scan_another | SCAN ANOTHER | JP Admin / Cashier / Customer Scan | Scan another customer.
+cashier.customer.attach | Attach customer to sale | JP Admin / Cashier / Customer Scan | Attach action.
+cashier.payment.method.thai_qr | Thai QR (PromptPay) | JP Admin / Cashier / Payment | Payment method title.
+cashier.payment.method.qr_credit | KBank QR Credit | JP Admin / Cashier / Payment | Payment method title.
+cashier.payment.loading | Loading payment surface... | JP Admin / Cashier / Payment | Busy state.
+cashier.payment.error_title | Could not load payment | JP Admin / Cashier / Payment | Error title.
+cashier.payment.method_label | METHOD | JP Admin / Cashier / Payment | Section label.
+cashier.payment.amount_label | AMOUNT (THB) | JP Admin / Cashier / Payment | Amount input label.
+cashier.payment.amount_placeholder | 0.00 | JP Admin / Cashier / Payment | Amount placeholder.
+cashier.payment.generate_qr | Generate QR for this amount | JP Admin / Cashier / Payment | QR generation action.
+cashier.payment.payments_label | PAYMENTS | JP Admin / Cashier / Payment | Section label.
+cashier.payment.summary.status | STATUS | JP Admin / Cashier / Payment | Summary label.
+cashier.payment.summary.items | ITEMS | JP Admin / Cashier / Payment | Summary label.
+cashier.payment.summary.branch | BRANCH | JP Admin / Cashier / Payment | Summary label.
+cashier.payment.qr_payload | QR payload, long-press to select | JP Admin / Cashier / Payment | Accessibility label.
+cashier.payment.copy_qr | COPY QR | JP Admin / Cashier / Payment | Copy action.
+cashier.payment.copy_success.title | Copied | JP Admin / Cashier / Payment alert | Clipboard title.
+cashier.payment.copy_success.body | QR payload copied to clipboard. | JP Admin / Cashier / Payment alert | Clipboard body.
+cashier.payment.refresh | Refresh payment status | JP Admin / Cashier / Payment | Inquiry action.
+cashier.payment.cancel | Cancel payment | JP Admin / Cashier / Payment | Payment cancellation action.
+cashier.payment.complete_sale | Complete sale | JP Admin / Cashier / Payment | Finalisation action.
+cashier.payment.confirm.title | Complete this sale? | JP Admin / Cashier / Payment confirm dialog | Safety-critical finalisation confirmation.
+cashier.payment.confirm.keep_reviewing | Keep reviewing | JP Admin / Cashier / Payment confirm dialog | Cancel confirmation.
+cashier.payment.confirm.confirm | Confirm complete sale | JP Admin / Cashier / Payment confirm dialog | Final confirmation action.
+cashier.payment.validation.enter_amount | Enter an amount in THB to generate a QR. | JP Admin / Cashier / Payment validation | Amount required.
+cashier.payment.validation.amount_format | Amount must be a positive number with up to 2 decimal places. | JP Admin / Cashier / Payment validation | Preserve decimals rule.
+cashier.payment.validation.amount_positive | Amount must be greater than 0. | JP Admin / Cashier / Payment validation | Positive amount rule.
+cashier.payment.validation.amount_too_large | Amount is too large. | JP Admin / Cashier / Payment validation | Upper bound message.
+cashier.payment.error.cart_empty | Add at least one product to the cart before generating a payment. | JP Admin / Cashier / Payment | Cart required.
+cashier.payment.error.duplicate_active | A PENDING payment already exists. Cancel or refresh it before creating another. | JP Admin / Cashier / Payment | Safety-critical: avoid duplicate active payments.
+cashier.payment.error.captured | This cart already has a captured payment. | JP Admin / Cashier / Payment | Payment already confirmed.
+cashier.payment.error.currency | Only THB is supported. | JP Admin / Cashier / Payment | Currency restriction.
+cashier.payment.error.kbank_config | KBank payment provider is not configured. Contact admin. | JP Admin / Cashier / Payment | Payment provider config issue.
+cashier.payment.error.kbank_transient | KBank is temporarily unavailable. Try again in a moment. | JP Admin / Cashier / Payment | Provider transient issue.
+cashier.completion.error.cart_empty | Add a product to the cart before completing the sale. | JP Admin / Cashier / Complete Sale | Finalisation blocker.
+cashier.completion.error.payment_missing | No confirmed payment found. Take payment first. | JP Admin / Cashier / Complete Sale | Safety-critical: payment confirmed is required.
+cashier.completion.error.payment_ambiguous | Multiple confirmed payments on this cart. Contact admin. | JP Admin / Cashier / Complete Sale | Safety-critical ambiguity.
+cashier.completion.error.payment_mismatch | Payment amount does not match the cart total. | JP Admin / Cashier / Complete Sale | Safety-critical amount check.
+cashier.completion.error.buyer_required | Attach a buyer before completing the sale. | JP Admin / Cashier / Complete Sale | Buyer required.
+cashier.completion.error.buyer_account | Customer account required for digital ownership. | JP Admin / Cashier / Complete Sale | Ownership requirement.
+cashier.completion.error.salesperson | Attach a salesperson before completing the sale. | JP Admin / Cashier / Complete Sale | Salesperson required.
+cashier.completion.error.unsellable | One or more products are no longer available to sell. | JP Admin / Cashier / Complete Sale | Product availability check.
+cashier.completion.error.documents | Could not generate invoice / receipt. Try again. | JP Admin / Cashier / Complete Sale | Document generation failure.
+cashier.success.loading | Finalising sale… | JP Admin / Cashier / Sale Success | Sale completion busy state.
+cashier.success.error_title | Could not finalise sale | JP Admin / Cashier / Sale Success | Error title.
+cashier.success.back_payment | BACK TO PAYMENT | JP Admin / Cashier / Sale Success | Return action.
+cashier.success.start_new | START NEW SALE | JP Admin / Cashier / Sale Success | New sale action.
+cashier.success.notes | NOTES | JP Admin / Cashier / Sale Success | Section label.
+cashier.success.status_sold | SOLD | JP Admin / Cashier / Sale Success | Product status after completed sale.
+cashier.success.amount | AMOUNT | JP Admin / Cashier / Sale Success | Sale item amount label.
+cashier.readiness.title | COMPLETION CHECKLIST | JP Admin / Cashier / Readiness Checklist | Checklist section title.
+cashier.readiness.loading | Checking sale readiness… | JP Admin / Cashier / Readiness Checklist | Busy state.
+cashier.readiness.payment | Payment confirmed | JP Admin / Cashier / Readiness Checklist | Safety-critical: payment only, not sale completion.
+cashier.readiness.customer | Customer account | JP Admin / Cashier / Readiness Checklist | Buyer/customer readiness item.
+cashier.readiness.salesperson | Salesperson attached | JP Admin / Cashier / Readiness Checklist | Salesperson readiness item.
+cashier.readiness.products | Products verified | JP Admin / Cashier / Readiness Checklist | Product readiness item.
+pos.approval.eyebrow | POS LOGIN | JP Admin / POS Approval | Section eyebrow.
+pos.approval.security_title | Security check | JP Admin / POS Approval | Security confirmation section.
+pos.approval.approve | Approve POS login | JP Admin / POS Approval | Approval action.
+pos.approval.deny | Deny POS login | JP Admin / POS Approval | Denial action.
+pos.approval.scan_qr | SCAN POS QR | JP Admin / POS Approval | Scan action.
+pos.approval.scan_another | SCAN ANOTHER | JP Admin / POS Approval | Scan another action.
+pos.approval.home | BACK TO HOME | JP Admin / POS Approval | Return to role hub.
+pos.approval.error_title | POS login request failed | JP Admin / POS Approval | Error card title.
+pos.approval.loading | Loading POS login request… | JP Admin / POS Approval | Busy state.
+pos.approval.camera_required | Camera access required | JP Admin / POS Approval | Camera permission title.
+pos.approval.enable_camera | ENABLE CAMERA | JP Admin / POS Approval | Permission action.
+pos.approval.open_settings | OPEN SETTINGS | JP Admin / POS Approval | Settings action.
+pos.approval.enter_manually | ENTER MANUALLY | JP Admin / POS Approval | Manual code action.
+pos.approval.challenge_label | POS CHALLENGE CODE | JP Admin / POS Approval | Field label.
+pos.approval.challenge_placeholder | JPPOS-XXXXXXXXXXXXXX | JP Admin / POS Approval | Challenge code placeholder.
+pos.approval.lookup | LOOK UP | JP Admin / POS Approval | Lookup action.
+pos.approval.status.awaiting | AWAITING APPROVAL | JP Admin / POS Approval | Challenge status.
+pos.approval.status.approved | APPROVED | JP Admin / POS Approval | Challenge status.
+pos.approval.status.completed | COMPLETED | JP Admin / POS Approval | Challenge status.
+pos.approval.status.denied | DENIED | JP Admin / POS Approval | Challenge status.
+pos.approval.status.cancelled | CANCELLED | JP Admin / POS Approval | Challenge status.
+pos.approval.status.expired | EXPIRED | JP Admin / POS Approval | Challenge status.

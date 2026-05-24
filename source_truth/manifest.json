@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "description": "Source truth files available to the Jade Palace static translator.",
+  "files": [
+    {
+      "name": "JP_ADMIN_COMMON_eng.txt",
+      "label": "JP Admin - Common"
+    },
+    {
+      "name": "JP_ADMIN_STAFFOPS_eng.txt",
+      "label": "JP Admin - StaffOps"
+    },
+    {
+      "name": "JP_ADMIN_TIMETABLE_eng.txt",
+      "label": "JP Admin - Timetable"
+    },
+    {
+      "name": "JP_ADMIN_CASHIER_eng.txt",
+      "label": "JP Admin - Cashier"
+    },
+    {
+      "name": "JP_ADMIN_NFC_eng.txt",
+      "label": "JP Admin - NFC"
+    },
+    {
+      "name": "JPPOS_eng.txt",
+      "label": "JPPOS"
+    },
+    {
+      "name": "JPUI_CUSTOMER_eng.txt",
+      "label": "JPUI Customer"
+    },
+    {
+      "name": "API_USER_FACING_ERRORS_eng.txt",
+      "label": "API user-facing errors"
+    }
+  ]
+}

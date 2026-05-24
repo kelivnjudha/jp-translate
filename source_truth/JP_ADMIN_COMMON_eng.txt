@@ -1,0 +1,65 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+common.action.cancel | Cancel | JP Admin / Shared buttons | Generic cancel action.
+common.action.back | Back | JP Admin / Shared navigation | Generic back navigation.
+common.action.close | Close | JP Admin / Sheets and modals | Generic close action.
+common.action.retry | Retry | JP Admin / Error states | Generic retry action.
+common.action.try_again | TRY AGAIN | JP Admin / Error buttons | Uppercase button label.
+common.action.sign_out | Sign out | JP Admin / Role Hub / Header | Ends current staff session.
+common.action.try_again_sentence | Try again | JP Admin / Error cards | Sentence-case retry action.
+common.loading.generic | Loading... | JP Admin / Generic loading | Generic loading state.
+common.loading.counts | Loading counts… | JP Admin / Tasks Home | Ellipsis indicates background refresh.
+common.status.active | Active | JP Admin / Role Hub cards | Badge for available tool.
+common.status.coming_soon | Coming soon | JP Admin / Role Hub cards | Badge for disabled/future tool.
+common.status.security | Security | JP Admin / Role Hub cards | Badge for security-related tool.
+common.status.pending | Pending | JP Admin / Status badges | Generic pending state.
+common.status.ready | Ready | JP Admin / Status badges | Generic ready state.
+common.status.issue | Issue | JP Admin / Status badges | Generic issue/problem state.
+common.status.idle | Idle | JP Admin / Status badges | Generic idle state.
+common.error.session_expired.title | Session expired | JP Admin / Error copy | Staff must sign in again.
+common.error.session_expired.body | Your session has expired. Please sign in again. | JP Admin / Error copy | Do not imply data was lost.
+common.error.permission_denied.title | Permission denied | JP Admin / Error copy | Generic access failure.
+common.error.permission_denied.body | You don't have access to this action. | JP Admin / Error copy | Generic staff permission denial.
+common.error.not_found.title | Not found | JP Admin / Error copy | Generic missing entity.
+common.error.not_found.body | This item could not be loaded. | JP Admin / Error copy | Keep neutral.
+common.error.already_updated.title | Already updated | JP Admin / Error copy | Optimistic/race conflict.
+common.error.already_updated.body | This item changed before your action landed. Refresh and try again. | JP Admin / Error copy | Must preserve refresh guidance.
+common.error.too_fast.title | Too fast | JP Admin / Error copy | Rate-limit title.
+common.error.check_form.title | Check the form | JP Admin / Validation alerts | Generic validation title.
+common.error.check_form.body | Some inputs need attention. | JP Admin / Validation alerts | Generic validation body.
+common.error.unexpected_response.title | Unexpected server response | JP Admin / API errors | Malformed payload from server.
+common.error.unexpected_response.body | JP Admin received a malformed payload. Try again. | JP Admin / API errors | Do not mention developer details.
+common.error.network.title | Couldn't reach the server | JP Admin / API errors | Network failure title.
+common.error.network.body | Check your connection and try again. | JP Admin / API errors | Generic connectivity guidance.
+common.error.config_missing.title | App configuration missing | JP Admin / API errors | Local app config is incomplete.
+common.error.config_missing.body | JP Admin is not fully configured. Contact your admin. | JP Admin / API errors | Do not name env variables.
+common.error.something_wrong.title | Something went wrong | JP Admin / API errors | Generic fallback title.
+common.error.something_wrong.body | Try again, or sign out and back in. | JP Admin / API errors | Generic fallback body.
+rolehub.greeting.morning | Good morning | JP Admin / Role Hub | Time-based greeting.
+rolehub.greeting.afternoon | Good afternoon | JP Admin / Role Hub | Time-based greeting.
+rolehub.tool.cashier.title | Cashier | JP Admin / Role Hub card | Staff mobile cashier entry.
+rolehub.tool.cashier.subtitle | Scan products and manage sales | JP Admin / Role Hub card | Tool description.
+rolehub.tool.notifications.title | Notifications | JP Admin / Role Hub card | Staff notifications entry.
+rolehub.tool.notifications.subtitle | Tasks, requests, and staff updates | JP Admin / Role Hub card | Tool description.
+rolehub.tool.nfc.title | NFC Tools | JP Admin / Role Hub card | NFC/authenticity tool entry.
+rolehub.tool.nfc.subtitle | Issue and check authenticity cards | JP Admin / Role Hub card | Tool description.
+rolehub.tool.timetable.title | Timetable | JP Admin / Role Hub card | Staff schedule entry.
+rolehub.tool.timetable.subtitle | Staff schedule and working hours | JP Admin / Role Hub card | Tool description.
+rolehub.tool.pos_login.title | POS Login | JP Admin / Role Hub card | Desktop POS approval entry.
+rolehub.tool.pos_login.subtitle | Approve desktop cashier login | JP Admin / Role Hub card | Tool description.
+rolehub.tool.branch_inventory.title | Branch Inventory | JP Admin / Role Hub card | Branch inventory management entry.
+rolehub.tool.branch_inventory.subtitle | Assign and move products | JP Admin / Role Hub card | Tool description.
+rolehub.tool.employees.title | Employees | JP Admin / Role Hub card | Staff management entry.
+rolehub.tool.employees.subtitle | Staff control and permissions | JP Admin / Role Hub card | Tool description.
+rolehub.tool.tasks.title | Tasks | JP Admin / Role Hub card | StaffOps tasks entry.
+rolehub.tool.tasks.subtitle | Tasks, requests, and staff follow-ups | JP Admin / Role Hub card | Tool description.
+rolehub.tool.staff_chat.title | Staff Chat | JP Admin / Role Hub card | Staff chat entry.
+rolehub.tool.staff_chat.subtitle | Branch messages and task cards | JP Admin / Role Hub card | Tool description.
+rolehub.tool.reports.title | Reports | JP Admin / Role Hub card | Reports entry.
+rolehub.tool.reports.subtitle | Branch and staff summaries | JP Admin / Role Hub card | Tool description.
+rolehub.tool.settings.title | Settings | JP Admin / Role Hub card | Settings entry.
+rolehub.tool.settings.subtitle | Account and app settings | JP Admin / Role Hub card | Tool description.
+rolehub.badge.new_count | {count} new | JP Admin / Role Hub notifications badge | Preserve {count}; source may show 99+ new.
+rolehub.badge.new_count_max | 99+ new | JP Admin / Role Hub notifications badge | Maximum display for many unread items.
+auth.login.email.placeholder | you@gmail.com | JP Admin / Login | Email placeholder.
+auth.login.password.placeholder | Minimum 8 characters | JP Admin / Login | Password placeholder.
+auth.login.submit | Sign in | JP Admin / Login | Staff login action.

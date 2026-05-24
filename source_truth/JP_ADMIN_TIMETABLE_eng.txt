@@ -1,0 +1,77 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+timetable.status.off | Off | JP Admin / Timetable / Status | Schedule status label.
+timetable.status.working | Working | JP Admin / Timetable / Status | Schedule status label.
+timetable.status.absent | Absent | JP Admin / Timetable / Status | Schedule status label.
+timetable.status.late | Late | JP Admin / Timetable / Status | Schedule status label.
+timetable.status.overtime | Overtime | JP Admin / Timetable / Status | Schedule status label.
+timetable.status.leave | Leave | JP Admin / Timetable / Status | Schedule status label.
+timetable.status.holiday | Holiday | JP Admin / Timetable / Status | Schedule status label.
+timetable.status.no_schedule | No schedule set | JP Admin / Timetable / Status | No schedule row exists.
+timetable.week.current | Jump to this week | JP Admin / Timetable / Week Selector | Accessibility/action label.
+timetable.week.previous | Previous week | JP Admin / Timetable / Week Selector | Week navigation.
+timetable.week.next | Next week | JP Admin / Timetable / Week Selector | Week navigation.
+timetable.tabs.views | Timetable views | JP Admin / Timetable / Tabs | Accessibility group label.
+timetable.header.back_home | Back to role hub | JP Admin / Timetable / Header | Navigation action.
+timetable.loading.label | Loading timetable… | JP Admin / Timetable | Loading state template.
+timetable.error.session.title | Session expired | JP Admin / Timetable / Error copy | Re-auth title.
+timetable.error.session.body | Your session has expired. Please sign in again. | JP Admin / Timetable / Error copy | Re-auth body.
+timetable.error.not_available.title | Not available | JP Admin / Timetable / Error copy | Access denied title.
+timetable.error.not_available.body | You do not have access to this timetable view. | JP Admin / Timetable / Error copy | Access denied body.
+timetable.error.branch_scope.title | Branch out of scope | JP Admin / Timetable / Error copy | Branch permission issue.
+timetable.error.branch_scope.body | This branch is outside your access. Pick a branch you manage. | JP Admin / Timetable / Error copy | Preserve branch-scope guidance.
+timetable.error.invalid_week.title | Invalid week | JP Admin / Timetable / Error copy | Invalid date range.
+timetable.error.invalid_week.body | The selected week is not valid. Pick a different week. | JP Admin / Timetable / Error copy | User can recover by selecting a week.
+timetable.error.branch_not_found.title | Branch not found | JP Admin / Timetable / Error copy | Missing branch.
+timetable.error.branch_not_found.body | The branch could not be loaded. | JP Admin / Timetable / Error copy | Missing branch body.
+timetable.error.staff_not_found.title | Staff not found | JP Admin / Timetable / Error copy | Missing staff member.
+timetable.error.staff_not_found.body | The staff member could not be loaded. | JP Admin / Timetable / Error copy | Missing staff body.
+timetable.error.unavailable.title | Timetable unavailable | JP Admin / Timetable / Error copy | API route unavailable.
+timetable.error.unavailable.body | Timetable is not available on this server. Check the API deployment. | JP Admin / Timetable / Error copy | Ops-oriented but user-visible.
+timetable.error.unexpected.title | Unexpected response | JP Admin / Timetable / Error copy | Malformed API response.
+timetable.error.unexpected.body | JP Admin received an unexpected server response. Try again or sign out. | JP Admin / Timetable / Error copy | User recovery guidance.
+timetable.error.network.title | Could not reach the server | JP Admin / Timetable / Error copy | Network title.
+timetable.error.network.body | Check your connection and try again. | JP Admin / Timetable / Error copy | Generic network guidance.
+timetable.error.paused.title | Timetable is paused | JP Admin / Timetable / Error copy | Feature disabled state.
+timetable.error.paused.body | Timetable is temporarily disabled. Please try again later. | JP Admin / Timetable / Error copy | Temporary disablement.
+timetable.error.config.title | App configuration missing | JP Admin / Timetable / Error copy | App config issue.
+timetable.error.config.body | JP Admin is not fully configured. Contact your admin. | JP Admin / Timetable / Error copy | Do not expose env names.
+timetable.error.generic.title | Something went wrong | JP Admin / Timetable / Error copy | Generic fallback title.
+timetable.error.generic.body | Try again, or sign out and back in. | JP Admin / Timetable / Error copy | Generic fallback body.
+timetable.deeplink.banner | Could not open the requested day automatically. Open this employee’s day: {date}. | JP Admin / Timetable / Deep-link banner | Preserve {date}; no raw employee IDs.
+timetable.deeplink.dismiss | Dismiss timetable instruction | JP Admin / Timetable / Deep-link banner | Accessibility/action label.
+timetable.my.today | TODAY | JP Admin / Timetable / My Schedule | Current day badge.
+timetable.my.add_schedule | Add schedule for this day | JP Admin / Timetable / My Schedule | Add schedule action.
+timetable.team.select_branch | Select branch | JP Admin / Timetable / Team Schedule | Branch selector label.
+timetable.day.close | Close day detail | JP Admin / Timetable / Day Detail | Close sheet action.
+timetable.day.try_again | Try again | JP Admin / Timetable / Day Detail | Error retry action.
+timetable.day.refresh_retry | Retry | JP Admin / Timetable / Day Detail refresh banner | Refresh retry action.
+timetable.day.need_change.title | Need a change for this day? | JP Admin / Timetable / Day Detail | Workflow shortcut section title.
+timetable.day.need_change.helper | Approval records the request. A manager may still need to update the timetable manually. | JP Admin / Timetable / Day Detail | Safety-critical: request approval is not timetable mutation.
+timetable.day.request_break | Request Break | JP Admin / Timetable / Day Detail | My Schedule workflow shortcut.
+timetable.day.request_absence | Request Absence | JP Admin / Timetable / Day Detail | My Schedule workflow shortcut.
+timetable.day.request_overtime | Request Overtime | JP Admin / Timetable / Day Detail | My Schedule workflow shortcut.
+timetable.day.assign_overtime.title | Assign overtime for this day | JP Admin / Timetable / Day Detail | Team Schedule manager action title.
+timetable.day.assign_overtime.body | Creates an overtime task. Update the timetable manually if working hours change. | JP Admin / Timetable / Day Detail | Safety-critical: task only, manual schedule update.
+timetable.day.assign_overtime.button | Assign Overtime | JP Admin / Timetable / Day Detail | Manager action button.
+timetable.day.edit_schedule | Edit schedule | JP Admin / Timetable / Day Detail | Schedule edit action.
+timetable.day.open_task | Open {taskTitle} | JP Admin / Timetable / Day Detail | Accessibility template; preserve {taskTitle}.
+timetable.day.edit_task | Edit | JP Admin / Timetable / Day Detail / Regular task | Edit action.
+timetable.day.cancel_task | Cancel | JP Admin / Timetable / Day Detail / Regular task | Cancel action.
+timetable.edit.close | Close edit sheet | JP Admin / Timetable / Edit Schedule | Close action.
+timetable.edit.notes_label | Schedule notes | JP Admin / Timetable / Edit Schedule | Field label/accessibility.
+timetable.edit.notes_placeholder | Optional — shift handover, reminders, etc. | JP Admin / Timetable / Edit Schedule | Placeholder; preserve optional meaning.
+timetable.edit.time_placeholder | HH:MM | JP Admin / Timetable / Edit Schedule | Preserve 24-hour format.
+timetable.edit.save | Save schedule | JP Admin / Timetable / Edit Schedule | Save action.
+timetable.edit.cancel_schedule | Cancel schedule | JP Admin / Timetable / Edit Schedule | Destructive cancel action.
+timetable.edit.cancel_confirm.title | Cancel this schedule? | JP Admin / Timetable / Edit Schedule dialog | Confirmation title.
+timetable.edit.cancel_confirm.body | This will cancel the staff member’s schedule for this day. | JP Admin / Timetable / Edit Schedule dialog | Destructive warning.
+timetable.regular_task.schedule_label | Schedule | JP Admin / Timetable / Regular Task Form | Field label.
+timetable.regular_task.title_label | Title | JP Admin / Timetable / Regular Task Form | Field label.
+timetable.regular_task.title_placeholder | Check store before leaving | JP Admin / Timetable / Regular Task Form | Example task title.
+timetable.regular_task.description_label | Description (optional) | JP Admin / Timetable / Regular Task Form | Field label.
+timetable.regular_task.description_placeholder | Details, checklist, expected outcome… | JP Admin / Timetable / Regular Task Form | Placeholder.
+timetable.regular_task.urgency_label | Urgency | JP Admin / Timetable / Regular Task Form | Field label.
+timetable.regular_task.due_time_label | Due time (optional, HH:MM) | JP Admin / Timetable / Regular Task Form | Preserve HH:MM format.
+timetable.regular_task.due_time_placeholder | 17:30 | JP Admin / Timetable / Regular Task Form | Example due time.
+timetable.regular_task.save | Save regular task | JP Admin / Timetable / Regular Task Form | Save action.
+timetable.regular_task.close | Close form | JP Admin / Timetable / Regular Task Form | Close action.

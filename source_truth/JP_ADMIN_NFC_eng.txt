@@ -1,0 +1,35 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+nfc.lookup.eyebrow | NFC TOOLS | JP Admin / NFC Lookup | Section eyebrow.
+nfc.lookup.input_label | PRODUCT OR CARD CODE | JP Admin / NFC Lookup | Field label.
+nfc.lookup.input_placeholder | Enter product serial, SKU, card serial, or QR token | JP Admin / NFC Lookup | Placeholder for product/card lookup.
+nfc.lookup.find | Find product | JP Admin / NFC Lookup | Submit action.
+nfc.lookup.clear | Clear input | JP Admin / NFC Lookup | Clear field action.
+nfc.lookup.dismiss | Dismiss | JP Admin / NFC Lookup | Dismiss error/result banner.
+nfc.lookup.open_hardware_test | Open NFC hardware test | JP Admin / NFC Lookup | Navigation action.
+nfc.lookup.error.enter_code | Enter a code to search. | JP Admin / NFC Lookup | Validation.
+nfc.lookup.error.config | App configuration is missing. Contact admin. | JP Admin / NFC Lookup | Do not expose config details.
+nfc.lookup.error.session | Your session expired. Please sign in again. | JP Admin / NFC Lookup | Re-auth.
+nfc.lookup.coming_next | COMING NEXT | JP Admin / NFC Lookup | Future feature badge.
+nfc.lookup.auth_status.active | Active. Authentic. | JP Admin / NFC Lookup / Auth card status | Customer/trust-sensitive status.
+nfc.lookup.auth_status.replaced | Replaced. | JP Admin / NFC Lookup / Auth card status | Authenticity card status.
+nfc.lookup.auth_status.retired | Retired. | JP Admin / NFC Lookup / Auth card status | Authenticity card status.
+nfc.lookup.auth_status.pending | Verification pending | JP Admin / NFC Lookup / Auth card status | Authenticity card status.
+nfc.hardware.ready.title | Ready | JP Admin / NFC Hardware Test | Idle title.
+nfc.hardware.ready.message | Pick an action below to test the NFC reader. | JP Admin / NFC Hardware Test | Idle helper.
+nfc.hardware.checking | Checking NFC… | JP Admin / NFC Hardware Test | Busy state.
+nfc.hardware.tap_read | Tap an NFC card on the back of the phone. | JP Admin / NFC Hardware Test | Read instruction.
+nfc.hardware.read_failed | Read failed. Try tapping the card again. | JP Admin / NFC Hardware Test | Read failure fallback.
+nfc.hardware.tap_write | Tap the card to write the test URL. | JP Admin / NFC Hardware Test | Write instruction.
+nfc.hardware.write_failed | Write failed. Try tapping the card again. | JP Admin / NFC Hardware Test | Write failure fallback.
+nfc.hardware.support | NFC SUPPORT | JP Admin / NFC Hardware Test | Result section.
+nfc.hardware.read_result | READ RESULT | JP Admin / NFC Hardware Test | Result section.
+nfc.hardware.write_result | WRITE RESULT | JP Admin / NFC Hardware Test | Result section.
+nfc.hardware.blank_tag | BLANK TAG | JP Admin / NFC Hardware Test | NFC tag state.
+nfc.hardware.not_available.title | NFC not available | JP Admin / NFC Hardware Test | Device capability error.
+nfc.hardware.not_available.message | NFC is not available on this phone. | JP Admin / NFC Hardware Test | Device capability error.
+nfc.hardware.turned_off.title | NFC turned off | JP Admin / NFC Hardware Test | Device setting error.
+nfc.hardware.turned_off.message | Turn on NFC in system settings, then try again. | JP Admin / NFC Hardware Test | Device setting guidance.
+nfc.hardware.ready_supported.title | NFC ready | JP Admin / NFC Hardware Test | Device ready title.
+nfc.hardware.ready_supported.message | Phone reports NFC is supported. You can read or write a card. | JP Admin / NFC Hardware Test | Device ready body.
+nfc.hardware.blank_detected.title | Blank tag detected | JP Admin / NFC Hardware Test | Read result.
+nfc.hardware.tag_detected.title | Tag detected | JP Admin / NFC Hardware Test | Read result.

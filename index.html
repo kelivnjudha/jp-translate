@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jade Palace Translator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Jade Palace translation workspace</p>
+        <h1>Translate UI text without touching code</h1>
+        <p class="lede">
+          Choose a preloaded source truth file, translate each line, then export validated JSON for the app.
+        </p>
+      </div>
+      <div class="hero-card" aria-live="polite">
+        <span class="hero-number" id="progressPercent">0%</span>
+        <span class="hero-label">translated</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="panel">
+        <div class="panel-heading">
+          <span class="step">1</span>
+          <div>
+            <h2>Choose source truth</h2>
+            <p>Source truth files are preloaded from <code>source_truth</code>. Pick the area you want to translate.</p>
+          </div>
+        </div>
+
+        <div class="manifest-list" id="manifestList">
+          <p class="muted">Loading source truth file list…</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <span class="step">2</span>
+          <div>
+            <h2>Language and existing work</h2>
+            <p>Start fresh, or load previously exported work from <code>translated_json/JSON</code>.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Language code
+            <input id="languageInput" type="text" inputmode="latin" placeholder="th" autocomplete="off" />
+          </label>
+          <label>
+            Translator name or note
+            <input id="translatorNoteInput" type="text" placeholder="Optional" autocomplete="off" />
+          </label>
+          <label>
+            Existing work
+            <select id="existingWorkSelect">
+              <option value="">Loading existing work…</option>
+            </select>
+          </label>
+          <div class="field-actions">
+            <button class="ghost" id="loadExistingWorkButton" type="button" disabled>Load existing work</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel workspace-panel">
+        <div class="workspace-top">
+          <div>
+            <p class="eyebrow">Current file</p>
+            <h2 id="activeSourceTitle">No source truth loaded</h2>
+            <p class="muted" id="activeSourceMeta">Choose a source truth file to begin.</p>
+          </div>
+          <div class="actions">
+            <button class="ghost" id="copyMissingButton" type="button" disabled>Keep English for missing</button>
+            <button class="ghost" id="validateButton" type="button" disabled>Validate</button>
+            <button class="primary" id="exportButton" type="button" disabled>Export JSON</button>
+          </div>
+        </div>
+
+        <div class="stats-grid" aria-live="polite">
+          <div class="stat">
+            <span id="totalCount">0</span>
+            <small>Total lines</small>
+          </div>
+          <div class="stat">
+            <span id="translatedCount">0</span>
+            <small>Translated</small>
+          </div>
+          <div class="stat">
+            <span id="missingCount">0</span>
+            <small>Missing</small>
+          </div>
+          <div class="stat warning">
+            <span id="issueCount">0</span>
+            <small>Issues</small>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <input id="searchInput" type="search" placeholder="Search source text, translation, key, or location…" />
+          <select id="filterSelect" aria-label="Filter translation rows">
+            <option value="all">All lines</option>
+            <option value="missing">Missing only</option>
+            <option value="translated">Translated only</option>
+            <option value="issues">Issues only</option>
+            <option value="unchanged">Kept in English</option>
+          </select>
+        </div>
+
+        <div class="message-area" id="messageArea" aria-live="polite"></div>
+        <div class="translation-list" id="translationList">
+          <div class="empty-state">
+            <h3>Ready when the source truth is.</h3>
+            <p>The first source truth file will load automatically.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template id="rowTemplate">
+      <article class="translation-row">
+        <div class="row-main">
+          <div class="source-block">
+            <span class="row-key"></span>
+            <p class="source-text"></p>
+            <p class="location-text"></p>
+            <p class="note-text"></p>
+          </div>
+          <div class="translation-block">
+            <textarea rows="3" spellcheck="true" placeholder="Type translation here"></textarea>
+            <div class="row-actions">
+              <button class="mini keep-english" type="button">Keep English</button>
+              <button class="mini clear-translation" type="button">Clear</button>
+              <span class="row-status"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row-issues"></div>
+      </article>
+    </template>
+
+    <script src="source_truth_bundle.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

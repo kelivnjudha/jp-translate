@@ -1,0 +1,164 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+staffops.tasks.tabs.my | My tasks | JP Admin / StaffOps / Tasks Home | Tab label for assigned tasks.
+staffops.tasks.tabs.branch | Branch | JP Admin / StaffOps / Tasks Home | Branch-scope tab.
+staffops.tasks.tabs.sent | Sent | JP Admin / StaffOps / Tasks Home | Tasks created by actor.
+staffops.tasks.error.unavailable.title | Tasks unavailable | JP Admin / StaffOps / Tasks Home | Error card title.
+staffops.tasks.error.unavailable.body | Something went wrong. | JP Admin / StaffOps / Tasks Home | Generic task-list error.
+staffops.tasks.empty.my.title | Nothing on your plate | JP Admin / StaffOps / Tasks Home | Empty assigned-task list.
+staffops.tasks.empty.my.body | No tasks assigned to you yet. Pull to refresh. | JP Admin / StaffOps / Tasks Home | Preserve pull-to-refresh guidance.
+staffops.tasks.empty.branch.title | No branch tasks | JP Admin / StaffOps / Tasks Home | Empty branch tab.
+staffops.tasks.empty.branch.body | No tasks for your branches in the current view. | JP Admin / StaffOps / Tasks Home | Branch-scope empty state.
+staffops.tasks.empty.sent.title | No sent tasks | JP Admin / StaffOps / Tasks Home | Empty sent tab.
+staffops.tasks.empty.sent.body | You haven't created any tasks yet. | JP Admin / StaffOps / Tasks Home | Empty sent task state.
+staffops.tasks.create.title_field | Title | JP Admin / StaffOps / Create Task | Field label.
+staffops.tasks.create.title_placeholder | Restock product display | JP Admin / StaffOps / Create Task | Example task title.
+staffops.tasks.create.description_label | Description (optional) | JP Admin / StaffOps / Create Task | Field label.
+staffops.tasks.create.description_placeholder | Details, instructions, expected outcome… | JP Admin / StaffOps / Create Task | Placeholder; ellipsis intentional.
+staffops.tasks.create.urgency_label | Urgency | JP Admin / StaffOps / Create Task | Field label.
+staffops.tasks.create.task_date_label | Task date | JP Admin / StaffOps / Create Task | Date field.
+staffops.tasks.create.date_placeholder | 2026-05-20 | JP Admin / StaffOps / Create Task | Example date.
+staffops.tasks.create.date_hint | Format: YYYY-MM-DD | JP Admin / StaffOps / Create Task | Preserve date format.
+staffops.tasks.create.loading_targets | Loading targets… | JP Admin / StaffOps / Create Task | Target picker loading text.
+staffops.tasks.create.submit | Create and send task | JP Admin / StaffOps / Create Task | Submit accessibility/action text.
+staffops.tasks.create.pick_target.title | Pick a target | JP Admin / StaffOps / Create Task alert | Validation title.
+staffops.tasks.create.pick_target.body | Choose who this task should go to. | JP Admin / StaffOps / Create Task alert | Validation body.
+staffops.tasks.detail.acknowledge | Acknowledge | JP Admin / StaffOps / Task Detail | Employee confirms they saw task.
+staffops.tasks.detail.mark_done | Mark done | JP Admin / StaffOps / Task Detail | Employee marks task complete.
+staffops.tasks.detail.send_task | Send task | JP Admin / StaffOps / Task Detail | Sends draft task.
+staffops.tasks.detail.cancel_task | Cancel task | JP Admin / StaffOps / Task Detail | Cancels task.
+staffops.tasks.detail.cancel_confirm.title | Cancel this task? | JP Admin / StaffOps / Task Detail dialog | Destructive confirmation.
+staffops.tasks.detail.cancel_confirm.body | The task will be cancelled for all assignees. | JP Admin / StaffOps / Task Detail dialog | Must preserve all-assignees impact.
+staffops.attachments.error.session.title | Session expired | JP Admin / StaffOps / Attachments | Re-auth required.
+staffops.attachments.error.session.body | Please sign in again. | JP Admin / StaffOps / Attachments | Re-auth guidance.
+staffops.attachments.empty_detail | No additional detail. | JP Admin / StaffOps / Attachments | Attachment with no extra metadata.
+staffops.attachments.type.note | Note | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.product | Product | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.appointment | Appointment | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.sale | Sale | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.audit_log | Audit log | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.media | Media | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.document | Document | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.attendance | Attendance | JP Admin / StaffOps / Attachments | Attachment type label.
+staffops.attachments.type.attachment | Attachment | JP Admin / StaffOps / Attachments | Fallback attachment type.
+staffops.requests.tabs.sent | Sent | JP Admin / StaffOps / Requests | Requests user sent.
+staffops.requests.tabs.received | Received | JP Admin / StaffOps / Requests | Requests awaiting user's review.
+staffops.requests.tabs.branch | Branch | JP Admin / StaffOps / Requests | Branch-scope requests.
+staffops.requests.tabs.all | All | JP Admin / StaffOps / Requests | All visible requests.
+staffops.requests.error.unavailable.title | Requests unavailable | JP Admin / StaffOps / Requests | Error card title.
+staffops.requests.error.unavailable.body | Something went wrong. | JP Admin / StaffOps / Requests | Generic list error.
+staffops.requests.empty.sent.title | Nothing sent | JP Admin / StaffOps / Requests | Empty sent requests.
+staffops.requests.empty.sent.body | You haven't sent any requests yet. | JP Admin / StaffOps / Requests | Empty sent request body.
+staffops.requests.empty.received.title | Inbox clear | JP Admin / StaffOps / Requests | Empty received requests.
+staffops.requests.empty.received.body | No requests waiting on your decision. | JP Admin / StaffOps / Requests | Manager/reviewer empty state.
+staffops.requests.empty.branch.title | Branch is quiet | JP Admin / StaffOps / Requests | Empty branch requests.
+staffops.requests.empty.branch.body | No requests in your branches right now. | JP Admin / StaffOps / Requests | Branch-scope empty state.
+staffops.requests.empty.all.title | No requests | JP Admin / StaffOps / Requests | Empty all requests.
+staffops.requests.empty.all.body | No requests in scope. | JP Admin / StaffOps / Requests | Scope-based empty state.
+staffops.requests.create.subject.break | Break | JP Admin / StaffOps / Create Request | Request subject.
+staffops.requests.create.subject.overtime | Overtime | JP Admin / StaffOps / Create Request | Request subject.
+staffops.requests.create.subject.bonus | Bonus | JP Admin / StaffOps / Create Request | Bonus is not part of current workflow forms.
+staffops.requests.create.subject.absence | Absence | JP Admin / StaffOps / Create Request | Request subject.
+staffops.requests.create.subject.direct_chat | Direct chat | JP Admin / StaffOps / Create Request | Direct admin chat request.
+staffops.requests.create.subject.other | Other | JP Admin / StaffOps / Create Request | Fallback request subject.
+staffops.requests.create.title_label | Title | JP Admin / StaffOps / Create Request | Field label.
+staffops.requests.create.title_placeholder | Short summary of your request | JP Admin / StaffOps / Create Request | Placeholder.
+staffops.requests.create.description_label | Description (optional) | JP Admin / StaffOps / Create Request | Field label.
+staffops.requests.create.description_placeholder | More context for the reviewer… | JP Admin / StaffOps / Create Request | Placeholder.
+staffops.requests.create.date_label | Date | JP Admin / StaffOps / Create Request | Field label.
+staffops.requests.create.date_hint | Format: YYYY-MM-DD | JP Admin / StaffOps / Create Request | Preserve format.
+staffops.requests.create.branch_optional | Branch (optional) | JP Admin / StaffOps / Create Request | Optional branch field.
+staffops.requests.create.send | Send request | JP Admin / StaffOps / Create Request | Submit action.
+staffops.requests.create.no_individuals | No individual reviewers available. | JP Admin / StaffOps / Create Request | Target picker empty state.
+staffops.requests.create.no_roles | No reviewer roles available. | JP Admin / StaffOps / Create Request | Target picker empty state.
+staffops.requests.create.no_tiers | No reviewer tiers available. | JP Admin / StaffOps / Create Request | Target picker empty state.
+staffops.workflow.quick.break.title | Request Break | JP Admin / StaffOps / Workflow Quick Actions | Shortcut card title.
+staffops.workflow.quick.break.body | Short pause approval | JP Admin / StaffOps / Workflow Quick Actions | Shortcut card body.
+staffops.workflow.quick.absence.title | Request Absence | JP Admin / StaffOps / Workflow Quick Actions | Shortcut card title.
+staffops.workflow.quick.absence.body | Sick, personal, vacation | JP Admin / StaffOps / Workflow Quick Actions | Shortcut card body.
+staffops.workflow.quick.overtime.title | Request Overtime | JP Admin / StaffOps / Workflow Quick Actions | Shortcut card title.
+staffops.workflow.quick.overtime.body | Extra time authorization | JP Admin / StaffOps / Workflow Quick Actions | Shortcut card body.
+staffops.workflow.form.title | Workflow request | JP Admin / StaffOps / Workflow Request Form | Screen title.
+staffops.workflow.form.subtitle | Specialized StaffOps workflow | JP Admin / StaffOps / Workflow Request Form | Screen subtitle.
+staffops.workflow.form.loading | Preparing workflow form… | JP Admin / StaffOps / Workflow Request Form | Loading state.
+staffops.workflow.form.permission.title | Cannot create requests | JP Admin / StaffOps / Workflow Request Form | Permission block title.
+staffops.workflow.form.permission.body | Your role does not have permission to send workflow requests. | JP Admin / StaffOps / Workflow Request Form | Permission block body.
+staffops.workflow.form.workflow_label | WORKFLOW | JP Admin / StaffOps / Workflow Request Form | Section eyebrow.
+staffops.workflow.form.break.label | Break | JP Admin / StaffOps / Workflow Request Form | Workflow option.
+staffops.workflow.form.break.subtitle | Request a short pause from schedule duties. | JP Admin / StaffOps / Workflow Request Form | Workflow option helper.
+staffops.workflow.form.absence.label | Absence | JP Admin / StaffOps / Workflow Request Form | Workflow option.
+staffops.workflow.form.absence.subtitle | Request sick, personal, vacation, or other absence. | JP Admin / StaffOps / Workflow Request Form | Workflow option helper.
+staffops.workflow.form.overtime.label | Overtime | JP Admin / StaffOps / Workflow Request Form | Workflow option.
+staffops.workflow.form.overtime.subtitle | Request authorization for extra working time. | JP Admin / StaffOps / Workflow Request Form | Workflow option helper.
+staffops.workflow.form.linked_schedule | Linked to timetable schedule | JP Admin / StaffOps / Workflow Request Form | Indicates request came from timetable; do not show raw ID.
+staffops.workflow.form.selected_day | Request for selected timetable day | JP Admin / StaffOps / Workflow Request Form | Indicates route prefill.
+staffops.workflow.form.policy_note | Approval records the request. A manager may still need to update the timetable manually. | JP Admin / StaffOps / Workflow Request Form | Safety-critical: approval is not automatic timetable mutation.
+staffops.workflow.form.title_optional | Title (optional) | JP Admin / StaffOps / Workflow Request Form | Field label.
+staffops.workflow.form.reason_label | Reason | JP Admin / StaffOps / Workflow Request Form | Field label.
+staffops.workflow.form.reason_placeholder | Explain why this approval is needed… | JP Admin / StaffOps / Workflow Request Form | Placeholder.
+staffops.workflow.form.send_to | SEND TO | JP Admin / StaffOps / Workflow Request Form | Reviewer section label.
+staffops.workflow.form.loading_reviewers | Loading reviewers… | JP Admin / StaffOps / Workflow Request Form | Reviewer loading text.
+staffops.workflow.form.no_reviewer | No reviewer available for this request. | JP Admin / StaffOps / Workflow Request Form | Empty reviewer state.
+staffops.workflow.form.select_reviewer | Select a reviewer to send this request. | JP Admin / StaffOps / Workflow Request Form | Inline validation when reviewers exist.
+staffops.workflow.form.no_branch | No branch | JP Admin / StaffOps / Workflow Request Form | Branch picker none option.
+staffops.workflow.form.submit_template | SEND {workflow} REQUEST | JP Admin / StaffOps / Workflow Request Form | Preserve {workflow}; source uppercases workflow name.
+staffops.workflow.form.pick_reviewer.title | Pick a reviewer | JP Admin / StaffOps / Workflow Request Form alert | Validation title.
+staffops.workflow.form.pick_reviewer.body | Choose who should receive this request. | JP Admin / StaffOps / Workflow Request Form alert | Validation body.
+staffops.workflow.followup.break.title | Break approved | JP Admin / StaffOps / Request Detail | Approved break follow-up card.
+staffops.workflow.followup.break.body | The break is authorized. Update timetable notes manually if this changes the working day. | JP Admin / StaffOps / Request Detail | Safety-critical: manual timetable action only.
+staffops.workflow.followup.absence.title | Absence approved | JP Admin / StaffOps / Request Detail | Approved absence follow-up card.
+staffops.workflow.followup.absence.body | Review the timetable and cancel or update the schedule if needed. | JP Admin / StaffOps / Request Detail | Safety-critical: no automatic absence marking.
+staffops.workflow.followup.overtime.title | Overtime approved | JP Admin / StaffOps / Request Detail | Approved overtime follow-up card.
+staffops.workflow.followup.overtime.body | Create an overtime task or update the schedule manually. | JP Admin / StaffOps / Request Detail | Safety-critical: no automatic overtime task or timetable mutation.
+staffops.workflow.followup.open_timetable | OPEN TIMETABLE DAY | JP Admin / StaffOps / Request Detail | CTA to timetable day.
+staffops.workflow.followup.create_overtime | Create overtime assignment | JP Admin / StaffOps / Request Detail | CTA for approved overtime request.
+staffops.workflow.followup.insufficient_overtime | This request does not have enough information to prefill an overtime assignment. | JP Admin / StaffOps / Request Detail | Safe fallback when required data missing.
+staffops.overtime.assignment.home.eyebrow | MANAGER ACTION | JP Admin / StaffOps / Tasks Home | Overtime assignment quick action eyebrow.
+staffops.overtime.assignment.home.title | Assign Overtime | JP Admin / StaffOps / Tasks Home | Quick action title.
+staffops.overtime.assignment.home.body | Send an overtime task to staff. Timetable updates stay manual. | JP Admin / StaffOps / Tasks Home | Safety-critical: timetable remains manual.
+staffops.overtime.assignment.home.button | ASSIGN | JP Admin / StaffOps / Tasks Home | Quick action button.
+staffops.overtime.assignment.loading | Preparing overtime form… | JP Admin / StaffOps / Overtime Assignment Create | Loading state.
+staffops.overtime.assignment.eyebrow | OVERTIME ASSIGNMENT | JP Admin / StaffOps / Overtime Assignment Create | Section eyebrow.
+staffops.overtime.assignment.intro_title | Send an operational overtime task | JP Admin / StaffOps / Overtime Assignment Create | Screen intro.
+staffops.overtime.assignment.from_request_hint | Created from approved overtime request | JP Admin / StaffOps / Overtime Assignment Create | Source hint; source request ID is not shown.
+staffops.overtime.assignment.from_timetable_hint | Assigning overtime for selected timetable day | JP Admin / StaffOps / Overtime Assignment Create | Source hint.
+staffops.overtime.assignment.safety_request | This creates an overtime assignment task from an approved request. It does not change scheduled hours automatically. | JP Admin / StaffOps / Overtime Assignment Create | Safety-critical.
+staffops.overtime.assignment.safety_timetable | This creates an overtime task. It does not change scheduled hours automatically. | JP Admin / StaffOps / Overtime Assignment Create | Safety-critical.
+staffops.overtime.assignment.title_label | Title (optional) | JP Admin / StaffOps / Overtime Assignment Create | Field label.
+staffops.overtime.assignment.title_placeholder | Overtime assignment | JP Admin / StaffOps / Overtime Assignment Create | Placeholder/default title.
+staffops.overtime.assignment.date_label | Overtime date | JP Admin / StaffOps / Overtime Assignment Create | Field label.
+staffops.overtime.assignment.date_placeholder | YYYY-MM-DD | JP Admin / StaffOps / Overtime Assignment Create | Date placeholder.
+staffops.overtime.assignment.duration_label | Duration minutes | JP Admin / StaffOps / Overtime Assignment Create | Field label.
+staffops.overtime.assignment.duration_placeholder | 120 | JP Admin / StaffOps / Overtime Assignment Create | Example duration.
+staffops.overtime.assignment.start_label | Start time (optional) | JP Admin / StaffOps / Overtime Assignment Create | Field label.
+staffops.overtime.assignment.end_label | End time (optional) | JP Admin / StaffOps / Overtime Assignment Create | Field label.
+staffops.overtime.assignment.time_placeholder | HH:MM | JP Admin / StaffOps / Overtime Assignment Create | Preserve 24-hour time format.
+staffops.overtime.assignment.instructions_label | Instructions (optional) | JP Admin / StaffOps / Overtime Assignment Create | Field label.
+staffops.overtime.assignment.instructions_placeholder | Where to report, expected work, handoff notes… | JP Admin / StaffOps / Overtime Assignment Create | Placeholder.
+staffops.overtime.assignment.loading_targets | Loading targets… | JP Admin / StaffOps / Overtime Assignment Create | Target loading state.
+staffops.overtime.assignment.prefilled_request | Employee target was prefilled from the approved overtime request. You can change it if needed. | JP Admin / StaffOps / Overtime Assignment Create | Target prefill hint.
+staffops.overtime.assignment.prefilled_timetable | Employee target was prefilled from Team Timetable. You can change it if needed. | JP Admin / StaffOps / Overtime Assignment Create | Target prefill hint.
+staffops.overtime.assignment.no_targets | No assignable target is available. | JP Admin / StaffOps / Overtime Assignment Create | Empty target state.
+staffops.overtime.assignment.choose_target | Choose who should receive this overtime assignment. | JP Admin / StaffOps / Overtime Assignment Create | Target validation copy.
+staffops.overtime.assignment.submit | Create overtime assignment | JP Admin / StaffOps / Overtime Assignment Create | Submit action.
+staffops.overtime.assignment.validation.duration_required | Duration is required. | JP Admin / StaffOps / Overtime Assignment Create alert | Validation.
+staffops.overtime.assignment.validation.pick_target.title | Pick a target | JP Admin / StaffOps / Overtime Assignment Create alert | Validation title.
+staffops.overtime.assignment.validation.pick_target.body | Choose who should receive this overtime assignment. | JP Admin / StaffOps / Overtime Assignment Create alert | Validation body.
+staffops.overtime.assignment.detail.eyebrow | OVERTIME ASSIGNMENT | JP Admin / StaffOps / Task Detail | Workflow detail heading.
+staffops.overtime.assignment.detail.acceptance | Acknowledge means you have seen and accepted this overtime assignment. | JP Admin / StaffOps / Task Detail | Safety-critical employee acceptance meaning.
+staffops.overtime.assignment.detail.date | Overtime date | JP Admin / StaffOps / Task Detail | Detail row label.
+staffops.overtime.assignment.detail.duration | Duration | JP Admin / StaffOps / Task Detail | Detail row label.
+staffops.overtime.assignment.detail.time_window | Time window | JP Admin / StaffOps / Task Detail | Detail row label.
+staffops.overtime.assignment.detail.no_fixed_time | No fixed time window | JP Admin / StaffOps / Task Detail | Detail row fallback.
+staffops.overtime.assignment.detail.instructions | Instructions | JP Admin / StaffOps / Task Detail | Detail row label.
+staffops.overtime.assignment.detail.safety | No timetable or payroll change is made automatically. | JP Admin / StaffOps / Task Detail | Safety-critical: no payroll or timetable mutation.
+staffops.chat.error.not_found.title | Chat not found | JP Admin / StaffOps / Chat Thread | Error title.
+staffops.chat.error.not_found.body | This chat could not be opened. | JP Admin / StaffOps / Chat Thread | Error body.
+staffops.chat.refresh_retry | Retry | JP Admin / StaffOps / Chat Thread | Refresh banner retry action.
+staffops.chat.close_direct | Close this direct chat | JP Admin / StaffOps / Chat Thread | Direct admin chat close action.
+staffops.chat.closed_state | This chat is closed. New messages cannot be sent. | JP Admin / StaffOps / Chat Thread | Safety: closed chat cannot receive messages.
+staffops.chat.load_earlier | Load earlier messages | JP Admin / StaffOps / Chat Thread | Pagination action.
+staffops.chat.deleted_message | Message removed. | JP Admin / StaffOps / Chat Thread | Deleted message placeholder; do not reveal original content.
+staffops.chat.message_placeholder | Write a message… | JP Admin / StaffOps / Chat Thread | Composer placeholder.
+staffops.chat.send_message | Send message | JP Admin / StaffOps / Chat Thread | Composer action.
+staffops.notifications.session_expired.title | Session expired | JP Admin / StaffOps / Notifications | Re-auth title.
+staffops.notifications.session_expired.body | Please sign in again. | JP Admin / StaffOps / Notifications | Re-auth body.

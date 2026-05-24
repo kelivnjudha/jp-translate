@@ -1,0 +1,101 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+api.auth.user_not_setup | User account is not set up. | API / User controller / USER_NOT_SETUP | May be shown when auth exists but profile setup is incomplete.
+api.security.blocked | Request blocked by security rules | API / Security middleware | Generic security block; do not reveal rule internals.
+api.staffops.metadata.customer_forbidden | Customer accounts cannot access StaffOps metadata. | API / StaffOps metadata / STAFFOPS_FORBIDDEN_TIER | Staff-only access boundary.
+api.staffops.metadata.branch_scope_targets | Actor cannot view targets in that branch. | API / StaffOps metadata / STAFFOPS_BRANCH_SCOPE_VIOLATION | Branch scope denial.
+api.staffops.metadata.branch_scope_reviewers | Actor cannot request reviewers in that branch. | API / StaffOps metadata / STAFFOPS_BRANCH_SCOPE_VIOLATION | Reviewer branch scope denial.
+api.staffops.workflow.reason_required | reason is required. | API / StaffOps workflow request / WORKFLOW_REASON_REQUIRED | Validation error.
+api.staffops.workflow.target_required | target is required for StaffOps workflow requests. | API / StaffOps workflow request / WORKFLOW_TARGET_REQUIRED | Reviewer target must be selected.
+api.staffops.workflow.self_only | StaffOps-4C workflow requests are self-only. | API / StaffOps workflow request / WORKFLOW_RELATED_EMPLOYEE_FORBIDDEN | V1 self-service boundary.
+api.staffops.workflow.absence_kind | absenceKind must be SICK / PERSONAL / VACATION / EMERGENCY / UNPAID / OTHER. | API / StaffOps workflow request / WORKFLOW_ABSENCE_KIND_INVALID | Preserve enum values if shown.
+api.staffops.workflow.schedule_not_found | Linked schedule not found. | API / StaffOps workflow request | Linked timetable schedule missing.
+api.staffops.workflow.schedule_forbidden | Linked schedule does not belong to the requesting employee. | API / StaffOps workflow request | V1 self-service schedule boundary.
+api.staffops.workflow.schedule_branch_forbidden | Actor cannot reference a schedule outside their branch scope. | API / StaffOps workflow request | Branch-scope validation.
+api.staffops.workflow.schedule_branch_mismatch | linkedScheduleId branch does not match branchId. | API / StaffOps workflow request | API field names may be mapped by clients later.
+api.staffops.workflow.payload_unknown_key | workflowPayload contains unsupported fields. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_PAYLOAD_UNKNOWN_KEY | Sanitization/allow-list error.
+api.staffops.workflow.break_start_invalid | startTime must be HH:MM (24h). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_BREAK_START_INVALID | Preserve 24-hour format.
+api.staffops.workflow.break_end_invalid | endTime must be HH:MM (24h). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_BREAK_END_INVALID | Preserve 24-hour format.
+api.staffops.workflow.break_range_invalid | Break endTime must be after startTime (same day). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_BREAK_RANGE_INVALID | Same-day range rule.
+api.staffops.workflow.break_duration_invalid | durationMinutes must be a positive integer up to 480. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_BREAK_DURATION_INVALID | Preserve numeric max.
+api.staffops.workflow.break_duration_mismatch | durationMinutes must match the start/end time range. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_BREAK_DURATION_MISMATCH | Duration/time consistency.
+api.staffops.workflow.absence_date_invalid | startDate/date must be a real ISO date (YYYY-MM-DD). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_ABSENCE_DATE_INVALID | Preserve YYYY-MM-DD.
+api.staffops.workflow.absence_date_mismatch | date and startDate must match when both are provided. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_ABSENCE_DATE_MISMATCH | Validation rule.
+api.staffops.workflow.absence_end_invalid | endDate must be a real ISO date (YYYY-MM-DD). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_ABSENCE_END_DATE_INVALID | Preserve YYYY-MM-DD.
+api.staffops.workflow.absence_range_invalid | endDate must be on or after startDate. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_ABSENCE_RANGE_INVALID | Date range rule.
+api.staffops.workflow.absence_reason_required | reason is required for an absence request. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_ABSENCE_REASON_REQUIRED | Validation.
+api.staffops.workflow.absence_halfday_invalid | halfDay must be a boolean. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_ABSENCE_HALFDAY_INVALID | Technical boolean may be mapped in UI later.
+api.staffops.workflow.absence_kind_invalid | absenceKind must be SICK / PERSONAL / VACATION / EMERGENCY / UNPAID / OTHER. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_ABSENCE_KIND_INVALID | Preserve enum values if shown.
+api.staffops.workflow.overtime_date_invalid | date must be a real ISO date (YYYY-MM-DD). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_DATE_INVALID | Preserve YYYY-MM-DD.
+api.staffops.workflow.overtime_start_invalid | startTime must be HH:MM (24h). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_START_INVALID | Preserve 24-hour format.
+api.staffops.workflow.overtime_end_invalid | endTime must be HH:MM (24h). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_END_INVALID | Preserve 24-hour format.
+api.staffops.workflow.overtime_range_invalid | Overtime endTime must be after startTime (same day). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_RANGE_INVALID | Same-day range rule.
+api.staffops.workflow.overtime_duration_invalid | durationMinutes must be a positive integer up to 960. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_DURATION_INVALID | Preserve numeric max.
+api.staffops.workflow.overtime_duration_mismatch | durationMinutes must match the start/end time range. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_DURATION_MISMATCH | Duration/time consistency.
+api.staffops.workflow.overtime_assign_date_invalid | date must be a real ISO date (YYYY-MM-DD). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_ASSIGN_DATE_INVALID | Preserve YYYY-MM-DD.
+api.staffops.workflow.overtime_assign_duration_invalid | durationMinutes must be a positive integer up to 720. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_ASSIGN_DURATION_INVALID | Preserve numeric max.
+api.staffops.workflow.overtime_assign_start_invalid | startTime must be HH:MM (24h). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_ASSIGN_START_INVALID | Preserve 24-hour format.
+api.staffops.workflow.overtime_assign_end_invalid | endTime must be HH:MM (24h). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_ASSIGN_END_INVALID | Preserve 24-hour format.
+api.staffops.workflow.overtime_assign_range_invalid | Overtime endTime must be after startTime (same day). | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_ASSIGN_RANGE_INVALID | Same-day range rule.
+api.staffops.workflow.overtime_assign_duration_mismatch | durationMinutes must match the start/end time range. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_OVERTIME_ASSIGN_DURATION_MISMATCH | Duration/time consistency.
+api.staffops.workflow.type_invalid | workflowType is unknown. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_TYPE_INVALID | Unknown workflow type.
+api.staffops.workflow.payload_required | workflowPayload is required for this workflowType. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_PAYLOAD_REQUIRED | Workflow payload missing.
+api.staffops.workflow.payload_invalid | workflowPayload must be a plain object. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_PAYLOAD_INVALID | Payload shape invalid.
+api.staffops.workflow.general_payload_forbidden | GENERAL workflows must not carry a workflowPayload. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_GENERAL_PAYLOAD_FORBIDDEN | Generic routes cannot bypass specialized workflows.
+api.staffops.workflow.requester_missing | requesterUserId is required to default the related employee. | API / StaffOps workflow utility / STAFFOPS_WORKFLOW_REQUESTER_MISSING | Internal validation that may surface.
+api.staffops.assignment.self_forbidden | Overtime assignment cannot target the actor themselves. | API / StaffOps overtime assignment / WORKFLOW_ASSIGNMENT_SELF_FORBIDDEN | Assignment is downward, not self-assignment.
+api.staffops.assignment.linked_target_invalid | linkedScheduleId is only supported for individual overtime assignments. | API / StaffOps overtime assignment | Group targets cannot carry linked schedule.
+api.staffops.assignment.linked_not_found | Linked schedule not found. | API / StaffOps overtime assignment | Missing schedule.
+api.staffops.assignment.linked_employee_mismatch | Linked schedule does not belong to the target employee. | API / StaffOps overtime assignment | Prevents assigning schedule to wrong staff.
+api.staffops.assignment.linked_date_mismatch | Linked schedule date does not match overtimeDate. | API / StaffOps overtime assignment | Preserve date-match requirement.
+api.staffops.assignment.linked_branch_mismatch | Linked schedule branch does not match branchId. | API / StaffOps overtime assignment | Preserve branch-match requirement.
+api.staffops.assignment.linked_branch_forbidden | Actor cannot reference a schedule outside their branch scope. | API / StaffOps overtime assignment | Branch-scope validation.
+api.staffops.assignment.linked_cancelled | Linked schedule is cancelled. | API / StaffOps overtime assignment | Cannot link cancelled schedule.
+api.timetable.task.schedule_not_found | Schedule not found. | API / Timetable task | Timetable schedule missing.
+api.timetable.task.task_required | taskId is required. | API / Timetable task | Missing task ID.
+api.timetable.task.not_found | Task not found. | API / Timetable task | Task missing.
+api.timetable.task.regular_only | Only REGULAR tasks can be managed through the timetable. | API / Timetable task | Timetable task scope.
+api.timetable.task.not_linked | Regular task is not linked to a schedule. | API / Timetable task | Missing schedule link.
+api.timetable.task.cancelled_schedule | Cannot add a task to a cancelled schedule. | API / Timetable task | Cancelled schedule guard.
+api.timetable.task.employee_missing | Schedule employee not found. | API / Timetable task | Missing staff record.
+api.timetable.task.title_required | title is required. | API / Timetable task | Validation.
+api.timetable.task.date_invalid | date must be a valid YYYY-MM-DD value. | API / Timetable task | Preserve date format.
+api.timetable.task.terminal_edit | Task is terminal and can no longer be edited. | API / Timetable task | Terminal-state guard.
+api.timetable.task.title_empty | title cannot be empty. | API / Timetable task | Validation.
+api.timetable.task.already_terminal | Task is already terminal. | API / Timetable task | Terminal-state guard.
+api.timetable.task.race_terminal | Task was already terminal at cancel time. | API / Timetable task | Race-condition user message.
+api.staffops.chat.thread_type_required | threadType is required. | API / Staff Chat | Chat thread validation.
+api.staffops.chat.participant_required | participantUserId is required. | API / Staff Chat | Direct chat validation.
+api.staffops.chat.self_direct | You cannot start a direct chat with yourself. | API / Staff Chat | Direct chat validation.
+api.staffops.chat.participant_not_found | That staff member is not available for direct chat. | API / Staff Chat | Direct chat validation.
+api.staffops.chat.thread_required | threadId is required. | API / Staff Chat | Chat thread validation.
+api.staffops.chat.thread_not_found | Chat thread not found. | API / Staff Chat | Missing thread.
+api.staffops.chat.thread_forbidden | You do not have access to this chat thread. | API / Staff Chat | Privacy/access boundary.
+api.staffops.chat.not_open | This chat is closed — new messages cannot be sent. | API / Staff Chat | Closed chat state.
+api.staffops.chat.not_participant | You are not a participant of this chat thread. | API / Staff Chat | Access boundary.
+api.staffops.chat.not_closeable | Only direct admin chats can be closed. | API / Staff Chat | Close restriction.
+api.staffops.chat.close_forbidden | Only an admin can close a direct chat. | API / Staff Chat | Admin-only close action.
+api.staffops.chat.already_closed | This chat is already closed. | API / Staff Chat | Idempotent close state.
+api.staffops.chat.closed_race | This chat was already closed. | API / Staff Chat | Race condition message.
+api.staffops.chat.message_required | messageId is required. | API / Staff Chat | Message action validation.
+api.staffops.chat.message_not_found | Message not found. | API / Staff Chat | Missing message.
+api.staffops.chat.message_removed | Message is already removed. | API / Staff Chat | Deleted message state; do not expose original content.
+api.staffops.chat.delete_forbidden | You cannot remove this message. | API / Staff Chat | Delete permission.
+api.staffops.chat.removed_race | Message was already removed. | API / Staff Chat | Race condition message.
+api.nfc.unknown_card | Unknown NFC card. | API / Public NFC / NFC_UNKNOWN_CARD | Customer-safe authenticity lookup error.
+api.media.visibility_updated.manager | Media visibility updated | API / Media / MANAGER_MEDIA_VISIBILITY_UPDATED | Success toast candidate.
+api.media.visibility_updated.admin | Media visibility updated | API / Media / ADMIN_MEDIA_VISIBILITY_UPDATED | Success toast candidate.
+api.media.recycle_moved | Media moved to Recently Deleted. It will be permanently removed after 10 days. | API / Media / MEDIA_MOVED_TO_RECYCLE_BIN | Preserve 10-day retention.
+api.media.restored | Media restored successfully. | API / Media / MEDIA_RESTORED | Success message.
+api.media.deleted | Media permanently deleted. | API / Media / MEDIA_PERMANENTLY_DELETED | Destructive success message.
+api.line.summary.no_recipient | No active LINE chat recipient was available. | API / Customer notification | Booking summary delivery fallback.
+api.line.summary.no_appointment | Appointment details were not available for LINE summary delivery. | API / Customer notification | Booking summary delivery fallback.
+api.line.support.received | Support request received. | API / LINE support | User-facing support acknowledgement.
+api.line.support.staff_notified | All staff were notified about this chat. | API / LINE support | Support escalation status.
+api.payments.kbank.invalid_amount | KBank provider amount must be a positive number. | API / Payment provider / KBANK_QR_INVALID_AMOUNT | Payment validation; do not translate provider name as bank approval.
+api.payments.kbank.invalid_method | method must be THAI_QR or QR_CREDIT. | API / Payment provider / KBANK_PROVIDER_INVALID_METHOD | Technical enum may be mapped later.
+api.payments.kbank.fetch_unavailable | Fetch implementation is not available for KBank provider. | API / Payment provider | Ops/deployment issue, not customer blame.
+api.payments.kbank.token_missing | KBank OAuth token result did not include an access token. | API / Payment provider | Generic token field only; no value included.
+api.payments.kbank.qr_failed | KBank QR request failed. | API / Payment provider | Provider failure.
+api.payments.kbank.inquiry_failed | KBank QR inquiry request failed. | API / Payment provider | Provider failure.
+api.ai.support_notified | I’ll notify our staff now. Someone will assist you shortly. | API / Website assistant | Customer-facing assistant message.
+api.ai.help_scope | I can help with products, appointments, LINE connection, account pages, or staff support. Tell me what you want to do. | API / Website assistant | Customer-facing assistant capability prompt.

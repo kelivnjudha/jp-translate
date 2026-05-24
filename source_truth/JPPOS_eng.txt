@@ -1,0 +1,99 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+jppos.app.title | Jade Palace POS | JPPOS / App metadata | Desktop POS app title.
+jppos.login.brand.title | Jade Palace POS | JPPOS / Login | Login brand title.
+jppos.login.qr.preparing | Preparing POS login QR… | JPPOS / Login | QR generation loading state.
+jppos.login.qr.waiting | Waiting for JP Admin approval | JPPOS / Login | Staff approval pending.
+jppos.login.qr.approved | Approved — finishing sign-in… | JPPOS / Login | Approval received; signing in.
+jppos.login.qr.expired | This login QR expired | JPPOS / Login | QR expired state.
+jppos.login.qr.denied | POS login was denied | JPPOS / Login | Staff denied login.
+jppos.login.qr.failed | Could not create POS login QR. | JPPOS / Login | QR generation failure.
+jppos.login.qr.aria | QR code to approve this POS terminal — scan with JP Admin | JPPOS / Login / QR panel | Accessibility description.
+jppos.login.unavailable | POS login is not available on this terminal | JPPOS / Login | Disabled login state.
+jppos.login.preparing_aria | Preparing POS login QR | JPPOS / Login | Accessibility label.
+jppos.status.info | Info | JPPOS / Shared status badge | Status badge label.
+jppos.status.pending | Pending | JPPOS / Shared status badge | Status badge label.
+jppos.status.ready | Ready | JPPOS / Shared status badge | Status badge label.
+jppos.status.issue | Issue | JPPOS / Shared status badge | Status badge label.
+jppos.status.idle | Idle | JPPOS / Shared status badge | Status badge label.
+jppos.cashier.session.feature.complete_sale.title | Complete Sale | JPPOS / Cashier Session Gate | Feature card title.
+jppos.cashier.session.feature.display.title | Customer Display sync | JPPOS / Cashier Session Gate | Feature card title.
+jppos.cashier.session.feature.payments.title | Cash · Card · Wallets | JPPOS / Cashier Session Gate | Feature card title.
+jppos.cashier.session.step.scan_product | Scan product | JPPOS / Cashier Session Gate | Workflow step.
+jppos.cashier.session.step.create_draft | Create sale draft | JPPOS / Cashier Session Gate | Workflow step.
+jppos.cashier.session.step.finalize | Finalize sale | JPPOS / Cashier Session Gate | Workflow step.
+jppos.cashier.session.step.override_branch | Override branch | JPPOS / Cashier Session Gate | Workflow step.
+jppos.cashier.session.unreachable | POS service unreachable | JPPOS / Cashier Session Gate | API unreachable badge.
+jppos.cashier.session.required | POS session required | JPPOS / Cashier Session Gate | POS auth required badge.
+jppos.cashier.session.active | POS SESSION ACTIVE | JPPOS / Cashier Session Gate | Active session badge.
+jppos.cashier.session.server_enforced | Server-enforced | JPPOS / Cashier Session Gate | Security badge.
+jppos.cashier.session.all_steps_offline | All steps offline | JPPOS / Cashier Session Gate | Disabled workflow badge.
+jppos.cashier.session.coming_next | Coming next | JPPOS / Cashier Session Gate | Future step badge.
+jppos.product.scan.placeholder | Scan barcode or enter SKU | JPPOS / Cashier / Product Scan | Product scan placeholder.
+jppos.product.scan.aria | Product barcode or SKU | JPPOS / Cashier / Product Scan | Accessibility label.
+jppos.product.scan.waiting | Waiting for barcode | JPPOS / Cashier / Product Scan | Idle scan state.
+jppos.product.scan.found | Product found | JPPOS / Cashier / Product Scan | Successful scan state.
+jppos.product.scan.not_found | No product found | JPPOS / Cashier / Product Scan | Not found state.
+jppos.product.scan.failed | Scan failed | JPPOS / Cashier / Product Scan | Scan failure state.
+jppos.product.scan.error.lookup | JPPOS could not look up that product right now. | JPPOS / Cashier / Product Scan | API/network failure.
+jppos.product.scan.error.no_product | No product found for this code. Check the barcode and try again. | JPPOS / Cashier / Product Scan | Product not found.
+jppos.product.scan.error.rejected | The scan request was rejected. Try again with a different code. | JPPOS / Cashier / Product Scan | Invalid scan payload.
+jppos.product.scan.error.no_permission | This POS session cannot scan products. | JPPOS / Cashier / Product Scan | POS permission denied.
+jppos.product.availability.available | Available | JPPOS / Cashier / Product | Product availability.
+jppos.product.availability.sold | Sold | JPPOS / Cashier / Product | Product availability.
+jppos.product.availability.archived | Archived | JPPOS / Cashier / Product | Product availability.
+jppos.product.availability.needs_review | Needs review | JPPOS / Cashier / Product | Product availability.
+jppos.product.availability.wrong_branch | Wrong branch | JPPOS / Cashier / Product | Advisory branch mismatch.
+jppos.cart.status.open | OPEN | JPPOS / Cashier / Cart | Cart status.
+jppos.cart.status.checking_out | CHECKING OUT | JPPOS / Cashier / Cart | Cart status.
+jppos.cart.status.completed | COMPLETED | JPPOS / Cashier / Cart | Cart status.
+jppos.cart.status.cancelled | CANCELLED | JPPOS / Cashier / Cart | Cart status.
+jppos.cart.status.expired | EXPIRED | JPPOS / Cashier / Cart | Cart status.
+jppos.cart.disabled | Disabled | JPPOS / Cashier / Cart | Disabled panel state.
+jppos.cart.items_aria | Sale draft items | JPPOS / Cashier / Cart | Accessibility list label.
+jppos.cart.readiness.products | Products verified | JPPOS / Cashier / Readiness | Checklist item.
+jppos.cart.readiness.customer | Customer account | JPPOS / Cashier / Readiness | Checklist item.
+jppos.cart.readiness.salesperson | Salesperson | JPPOS / Cashier / Readiness | Checklist item.
+jppos.cart.readiness.payment | Payment | JPPOS / Cashier / Readiness | Payment readiness item; payment is not sale completion.
+jppos.cart.readiness.complete | Complete sale | JPPOS / Cashier / Readiness | Finalisation readiness item.
+jppos.cart.readiness.pending | Pending | JPPOS / Cashier / Readiness | Checklist state.
+jppos.cart.coming_next | Coming next | JPPOS / Cashier / Readiness | Future action badge.
+jppos.customer.placeholder | Scan or enter Customer ID | JPPOS / Cashier / Customer Attach | Customer ID input placeholder.
+jppos.customer.resolved | Resolved customer | JPPOS / Cashier / Customer Attach | Accessibility label.
+jppos.customer.error.session | POS session expired. Scan again to continue. | JPPOS / Cashier / Customer Attach | Re-auth POS session.
+jppos.salesperson.placeholder | Scan or enter Salesman ID | JPPOS / Cashier / Salesperson Attach | Staff scan placeholder.
+jppos.salesperson.resolved | Resolved staff | JPPOS / Cashier / Salesperson Attach | Accessibility label.
+jppos.salesperson.error.session | POS session expired. Scan again to continue. | JPPOS / Cashier / Salesperson Attach | Re-auth POS session.
+jppos.salesperson.error.sales_only | Only Sales staff can be attached as salesperson. | JPPOS / Cashier / Salesperson Attach | Role validation.
+jppos.salesperson.wrong_branch | Wrong branch | JPPOS / Cashier / Salesperson Attach | Advisory branch mismatch badge.
+jppos.salesperson.branch_mismatch | Branch mismatch. | JPPOS / Cashier / Salesperson Attach | Branch mismatch warning.
+jppos.salesperson.primary | primary | JPPOS / Cashier / Salesperson Attach | Primary branch marker.
+jppos.payment.method.thai_qr | Thai QR | JPPOS / Cashier / Payment Panel | Payment method.
+jppos.payment.method.qr_credit | QR Credit | JPPOS / Cashier / Payment Panel | Payment method.
+jppos.payment.method.cash | Cash | JPPOS / Cashier / Payment Panel | Payment method.
+jppos.payment.method.card_terminal | Card Terminal | JPPOS / Cashier / Payment Panel | Payment method.
+jppos.payment.method.bank_transfer | Manual Bank Transfer | JPPOS / Cashier / Payment Panel | Payment method.
+jppos.payment.no_payment | No payment | JPPOS / Cashier / Payment Panel | Empty payment state.
+jppos.payment.amount_placeholder | 0.00 | JPPOS / Cashier / Payment Panel | Amount input placeholder.
+jppos.payment.qr_aria | KBank payment QR — customer scans this code | JPPOS / Cashier / Payment Panel | Customer scans QR; no secret values.
+jppos.payment.confirmed | Payment confirmed | JPPOS / Cashier / Payment Panel | Safety-critical: payment only, not sale complete.
+jppos.payment.status.pending | Pending | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.payment.status.confirmed | Confirmed | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.payment.status.cancelled | Cancelled | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.payment.status.expired | Expired | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.payment.status.failed | Failed | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.payment.status.voided | Voided | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.payment.status.refunded | Refunded | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.payment.status.unknown | Unknown | JPPOS / Cashier / Payment Panel | Payment status.
+jppos.pos_provider.error.create_draft | This POS session cannot create a sale draft. | JPPOS / Cart provider errors | Permission/role failure.
+jppos.pos_provider.error.customer_first | Start a sale draft before attaching a customer. | JPPOS / Cart provider errors | Sequence guidance.
+jppos.pos_provider.error.salesperson_first | Start a sale draft before attaching a salesperson. | JPPOS / Cart provider errors | Sequence guidance.
+jppos.pos_provider.error.timeout | The POS service did not respond. Try again in a moment. | JPPOS / POS API errors | Timeout.
+jppos.pos_provider.error.network | Could not reach the POS service. Check the terminal's network. | JPPOS / POS API errors | Network failure.
+jppos.display.welcome_aria | Welcome to Jade Palace | JPPOS / Customer Display / Welcome | Accessibility label.
+jppos.display.checkout.preparing | Preparing your purchase | JPPOS / Customer Display / Checkout | Customer-facing checkout state.
+jppos.display.checkout.items | Items being prepared | JPPOS / Customer Display / Checkout | Customer-facing item list label.
+jppos.display.checkout.status | Sale status | JPPOS / Customer Display / Checkout | Customer-facing status label.
+jppos.display.payment_pending | Waiting for payment | JPPOS / Customer Display / Payment Pending | Customer-facing waiting state.
+jppos.display.payment_qr | Payment QR code — scan with your bank app | JPPOS / Customer Display / Payment Pending | Customer-facing QR instruction.
+jppos.display.payment_received | Payment received | JPPOS / Customer Display / Payment Confirmed | Safety-critical: do not imply sale is complete.
+jppos.display.thank_you | Thank you | JPPOS / Customer Display / Thank You | Customer-facing final screen.

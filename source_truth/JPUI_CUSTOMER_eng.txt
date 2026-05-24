@@ -1,0 +1,149 @@
+KEY | SOURCE TEXT | SCREEN / LOCATION | TRANSLATOR NOTE
+jpui.auth.login.title | Welcome Back | JPUI / Web Auth / Login | Login heading.
+jpui.auth.login.email_placeholder | you@gmail.com | JPUI / Web Auth / Login | Email placeholder.
+jpui.auth.login.password_placeholder | Minimum 8 characters | JPUI / Web Auth / Login | Password placeholder.
+jpui.auth.signup.name_placeholder | Rain John | JPUI / Web Auth / Signup | Name placeholder.
+jpui.auth.signup.city_placeholder | Search your city | JPUI / Web Auth / Signup | Location search placeholder.
+jpui.auth.signup.email_placeholder | john@gmail.com | JPUI / Web Auth / Signup | Email placeholder.
+jpui.auth.signup.password_placeholder | Minimum 8 characters | JPUI / Web Auth / Signup | Password placeholder.
+jpui.auth.signup.phone_placeholder | Enter your phone number | JPUI / Web Auth / Signup | Phone signup placeholder.
+jpui.auth.signup.line_placeholder | your-line-id | JPUI / Web Auth / Signup | Optional LINE ID placeholder.
+jpui.auth.language.english | English | JPUI / Auth / Preferred Language | Language option.
+jpui.auth.language.china | China | JPUI / Auth / Preferred Language | Existing source label says China.
+jpui.auth.language.thailand | Thailand | JPUI / Auth / Preferred Language | Language/country label.
+jpui.auth.language.myanmar | Myanmar | JPUI / Auth / Preferred Language | Language/country label.
+jpui.auth.phone.otp_placeholder | 6-digit code | JPUI / Phone Auth | OTP placeholder.
+jpui.auth.phone.setup_name | John Tan | JPUI / Phone Auth / Setup Account | Name placeholder.
+jpui.auth.phone.setup_city | Choose your city | JPUI / Phone Auth / Setup Account | City placeholder.
+jpui.auth.phone.verified_phone | Verified phone number | JPUI / Phone Auth / Setup Account | Disabled/verified phone field.
+jpui.auth.phone.email_placeholder | john@gmail.com | JPUI / Phone Auth / Setup Account | Email placeholder.
+jpui.auth.phone.preferred_language | Preferred Language | JPUI / Phone Auth / Setup Account | Field label.
+jpui.auth.otp.missing_access | Missing access token. Please sign in again. | JPUI / OTP | Re-auth required.
+jpui.auth.otp.sending | Sending verification code... | JPUI / OTP | Web OTP loading state.
+jpui.auth.reset.password_placeholder | Re-enter your new password | JPUI / Reset Password | Confirm password placeholder.
+jpui.auth.reset.checking | Checking your recovery link... | JPUI / Reset Password | Recovery link loading state.
+jpui.profile.loading_security | Loading security settings | JPUI / Profile Security | Loading state.
+jpui.profile.security.title | Security Settings | JPUI / Profile Security | Page title.
+jpui.profile.security.change_email | Change Email | JPUI / Profile Security | Section heading.
+jpui.profile.security.new_email | New Email | JPUI / Profile Security | Field label.
+jpui.profile.security.change_password | Change Password | JPUI / Profile Security | Section heading.
+jpui.profile.security.new_password | New Password | JPUI / Profile Security | Field label.
+jpui.profile.security.confirm_password | Confirm Password | JPUI / Profile Security | Field label.
+jpui.profile.security.confirm_placeholder | Re-enter password | JPUI / Profile Security | Placeholder.
+jpui.profile.security.otp_label | 6-digit verification code | JPUI / Profile Security OTP Dialog | Accessibility label.
+jpui.profile.info.email | Email | JPUI / Profile | Info label.
+jpui.profile.info.phone | Phone | JPUI / Profile | Info label.
+jpui.profile.info.location | Location | JPUI / Profile | Info label.
+jpui.profile.info.not_set | Not set | JPUI / Profile | Missing value fallback.
+jpui.profile.phone_placeholder | Local phone number | JPUI / Profile | Phone field placeholder.
+jpui.profile.tier.regular | Regular | JPUI / Profile / Membership tier | Tier label.
+jpui.profile.tier.vip | VIP | JPUI / Profile / Membership tier | Tier label.
+jpui.profile.tier.vvip | VVIP | JPUI / Profile / Membership tier | Tier label.
+jpui.profile.staff_fallback | Staff member | JPUI / Profile | Staff profile fallback name.
+jpui.customer_id.qr_aria | QR code for Jade Palace Customer ID {customerId} | JPUI / Customer ID Card | Preserve {customerId}; stable customer ID.
+jpui.customer_id.error.sign_in | Please sign in to view your Customer ID. | JPUI / Customer ID Card | Customer must authenticate.
+jpui.customer_id.copy_success | Customer ID copied. | JPUI / Customer ID Card | Clipboard success.
+jpui.customer_id.stability_note | This Customer ID is permanent and cannot be changed. | JPUI / Customer ID Card | Safety-critical: stable ID, no rotation.
+jpui.products.sort.curated | Curated Order | JPUI / Products | Sort option.
+jpui.products.sort.most_asked | Most Asked | JPUI / Products | Sort/filter option.
+jpui.products.sort.latest | Latest Items | JPUI / Products | Sort/filter option.
+jpui.products.sort.polished | Polished | JPUI / Products | Product type option.
+jpui.products.sort.raw | Raw Stone | JPUI / Products | Product type option.
+jpui.products.search_placeholder | Search products | JPUI / Products | Search placeholder.
+jpui.products.previous_page | Previous page | JPUI / Products | Pagination action.
+jpui.products.next_page | Next page | JPUI / Products | Pagination action.
+jpui.product.detail.unable | Unable to open this product | JPUI / Product Detail | Product detail error title.
+jpui.product.detail.weight | Weight | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.length | Length | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.height | Height | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.depth | Depth | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.total_mass | Total Mass | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.measurement | Measurement | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.sku | SKU | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.status | Status | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.tier | Tier | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.origin | Origin | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.color | Color | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.refractive_index | Refractive Index | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.density | Density | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.uv_spectrum | UV - Vis Spectrum | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.cut_shape | Cut & Shape | JPUI / Product Detail | Product attribute label.
+jpui.product.detail.description | Description | JPUI / Product Detail | Product attribute label.
+jpui.cart.branch_select | Select a branch | JPUI / Web Cart / Booking | Branch select placeholder.
+jpui.cart.full_name_placeholder | Your full name | JPUI / Web Cart / Booking | Guest booking name field.
+jpui.cart.email_placeholder | name@example.com | JPUI / Web Cart / Booking | Guest booking email field.
+jpui.cart.phone_placeholder | +66... | JPUI / Web Cart / Booking | Phone placeholder.
+jpui.cart.line_placeholder | @jadeclient | JPUI / Web Cart / Booking | LINE ID placeholder.
+jpui.cart.city_placeholder | Bangkok | JPUI / Web Cart / Booking | City placeholder.
+jpui.cart.notes_placeholder | Tell us what you want the concierge to prepare. | JPUI / Web Cart / Booking | Appointment note placeholder.
+jpui.appointment.track_status | Track your request status | JPUI / Appointment | Status tracking heading.
+jpui.appointment.empty | No appointment requests yet | JPUI / Appointment | Empty appointment list.
+jpui.authenticity.copy.eyebrow | JADE PALACE AUTHENTICITY | JPUI / Authenticity | Page eyebrow.
+jpui.authenticity.copy.line1 | Verify Jade | JPUI / Authenticity | Hero title line.
+jpui.authenticity.copy.line2 | Authenticity | JPUI / Authenticity | Hero title line.
+jpui.authenticity.copy.subtitle | Enter your Jade Palace card serial, QR token, product serial, or SKU to view its authenticity record. | JPUI / Authenticity | Verification instruction.
+jpui.authenticity.copy.privacy | We only show customer-safe authenticity information. Ownership details stay private unless you are signed in as the owner. | JPUI / Authenticity | Privacy-sensitive copy.
+jpui.authenticity.copy.field_label | Card, product, or QR code | JPUI / Authenticity | Field label.
+jpui.authenticity.copy.placeholder | JPAC-..., JPNFC-..., product serial, or SKU | JPUI / Authenticity | Input placeholder.
+jpui.authenticity.copy.help | You can scan the QR on your card or type the code manually. | JPUI / Authenticity | Help hint.
+jpui.authenticity.copy.submit | Verify authenticity | JPUI / Authenticity | Submit action.
+jpui.authenticity.copy.submit_loading | Verifying… | JPUI / Authenticity | Busy submit action.
+jpui.authenticity.copy.back_home | Back home | JPUI / Authenticity | Navigation action.
+jpui.liff.home.action.explore | Explore Jade | JPUI / LIFF Home | Rich-menu/LIFF action.
+jpui.liff.home.action.verify | Verify a Card | JPUI / LIFF Home | Rich-menu/LIFF action.
+jpui.liff.home.action.my_products | My Products | JPUI / LIFF Home | Rich-menu/LIFF action.
+jpui.liff.home.action.book | Book a Viewing | JPUI / LIFF Home | Rich-menu/LIFF action.
+jpui.liff.home.talk_to_staff | Talk to staff | JPUI / LIFF Home | Support CTA.
+jpui.liff.products.profile | Open membership profile | JPUI / LIFF Products | Profile icon accessibility label.
+jpui.liff.products.search_placeholder | Search by name, SKU, colour, or shape | JPUI / LIFF Products | Search placeholder; source uses colour.
+jpui.liff.product.colour | Colour | JPUI / LIFF Product Detail | Product attribute label.
+jpui.liff.product.shape | Shape | JPUI / LIFF Product Detail | Product attribute label.
+jpui.liff.product.weight | Weight | JPUI / LIFF Product Detail | Product attribute label.
+jpui.liff.product.dimensions | Dimensions | JPUI / LIFF Product Detail | Product attribute label.
+jpui.liff.product.origin | Origin | JPUI / LIFF Product Detail | Product attribute label.
+jpui.liff.product.tier | Tier | JPUI / LIFF Product Detail | Product attribute label.
+jpui.liff.product.previous_image | Previous image | JPUI / LIFF Product Detail | Gallery action.
+jpui.liff.product.next_image | Next image | JPUI / LIFF Product Detail | Gallery action.
+jpui.liff.product.image_coming | Product image coming soon | JPUI / LIFF Product Image | Image fallback.
+jpui.liff.cart.full_name | Full name | JPUI / LIFF Cart / Booking | Name placeholder.
+jpui.liff.cart.email | name@example.com | JPUI / LIFF Cart / Booking | Email placeholder.
+jpui.liff.cart.phone | Phone number | JPUI / LIFF Cart / Booking | Phone placeholder.
+jpui.liff.cart.line | Optional | JPUI / LIFF Cart / Booking | Optional LINE ID placeholder.
+jpui.liff.cart.language | English | JPUI / LIFF Cart / Booking | Default language placeholder.
+jpui.liff.cart.city | Bangkok | JPUI / LIFF Cart / Booking | City placeholder.
+jpui.liff.cart.notes | Anything our team should prepare for your viewing | JPUI / LIFF Cart / Booking | Appointment note placeholder.
+jpui.liff.booking.success.message | Thank you. Your request is recorded. | JPUI / LIFF Booking Success | Booking confirmation.
+jpui.liff.booking.next.explore | Explore Jade | JPUI / LIFF Booking Success | Next action.
+jpui.liff.booking.next.verify | Verify a Card | JPUI / LIFF Booking Success | Next action.
+jpui.liff.booking.next.my_products | My Products | JPUI / LIFF Booking Success | Next action.
+jpui.liff.membership.signup | Sign up | JPUI / LIFF Membership | Entry action.
+jpui.liff.membership.signin | Sign in | JPUI / LIFF Membership | Entry action.
+jpui.liff.membership.talk_to_staff | Talk to staff | JPUI / LIFF Membership | Support CTA.
+jpui.liff.membership.phone.placeholder | Enter your phone number | JPUI / LIFF Membership Phone | Phone placeholder.
+jpui.liff.membership.phone.otp_placeholder | 6-digit code | JPUI / LIFF Membership Phone | OTP placeholder.
+jpui.liff.membership.phone.name | John Tan | JPUI / LIFF Membership Phone Setup | Name placeholder.
+jpui.liff.membership.phone.city | Choose your city | JPUI / LIFF Membership Phone Setup | City placeholder.
+jpui.liff.membership.phone.verified | Verified phone number | JPUI / LIFF Membership Phone Setup | Verified phone field.
+jpui.liff.membership.phone.email | john@gmail.com | JPUI / LIFF Membership Phone Setup | Email placeholder.
+jpui.liff.membership.phone.line | your-line-id | JPUI / LIFF Membership Phone Setup | Optional LINE ID placeholder.
+jpui.liff.membership.phone.language | Preferred Language | JPUI / LIFF Membership Phone Setup | Language field label.
+jpui.liff.support.topic.booking | My booking | JPUI / LIFF Support | Topic label.
+jpui.liff.support.topic.claim | Claiming a card | JPUI / LIFF Support | Topic label.
+jpui.liff.support.topic.product | Product question | JPUI / LIFF Support | Topic label.
+jpui.liff.support.topic.other | Something else | JPUI / LIFF Support | Topic label.
+jpui.liff.support.not_line | Open this page inside LINE to message our team. | JPUI / LIFF Support | Must be opened inside LINE for chat.
+jpui.liff.authenticity.title | Verify Jade Authenticity | JPUI / LIFF Authenticity | Page title.
+jpui.liff.authenticity.privacy | Only customer-safe authenticity details are shown here. Owner-only details require sign-in. | JPUI / LIFF Authenticity | Privacy-sensitive copy.
+jpui.liff.authenticity.browse | Browse jade | JPUI / LIFF Authenticity | Navigation action.
+jpui.liff.authenticity.talk_staff | Talk to staff | JPUI / LIFF Authenticity Record | Support CTA.
+jpui.liff.authenticity.owned | Owned by you. | JPUI / LIFF Authenticity Record | Owner status.
+jpui.liff.authenticity.quick_verify | A quick verification step first. | JPUI / LIFF Authenticity Record | Claim/ownership verification prompt.
+jpui.liff.authenticity.status.active | Active. Authentic. | JPUI / LIFF Authenticity Record | Authenticity status; trust-sensitive.
+jpui.liff.authenticity.status.replaced | Replaced. | JPUI / LIFF Authenticity Record | Authenticity status.
+jpui.liff.authenticity.status.retired | Retired. | JPUI / LIFF Authenticity Record | Authenticity status.
+jpui.liff.authenticity.status.pending | Verification pending | JPUI / LIFF Authenticity Record | Authenticity status.
+jpui.liff.my_products.filter.all | All | JPUI / LIFF My Products | Filter label.
+jpui.liff.my_products.filter.action | Action needed | JPUI / LIFF My Products | Filter label.
+jpui.liff.my_products.filter.owned | Owned | JPUI / LIFF My Products | Filter label.
+jpui.liff.my_products.sign_in | Please sign in to open My Products. | JPUI / LIFF My Products | Auth required.
+jpui.ownership.transfer.email_placeholder | future-owner@example.com | JPUI / Ownership Transfer | Future owner email placeholder.
