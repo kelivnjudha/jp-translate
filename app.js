@@ -762,12 +762,32 @@ function downloadTextFile(fileName, text, type) {
 function createMessageNode(type, text) {
   const node = document.createElement("div");
   node.className = `message ${type}`;
+  node.tabIndex = -1;
+  if (type === "error" || type === "warn") {
+    node.setAttribute("role", "alert");
+  } else {
+    node.setAttribute("role", "status");
+  }
   node.textContent = text;
   return node;
 }
 
-function showMessage(type, text) {
-  els.messageArea.replaceChildren(createMessageNode(type, text));
+function showMessage(type, text, options = {}) {
+  const node = createMessageNode(type, text);
+  const shouldReveal = options.reveal ?? (type === "error" || type === "warn");
+
+  els.messageArea.replaceChildren(node);
+
+  if (shouldReveal) {
+    requestAnimationFrame(() => {
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      node.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "center",
+      });
+      node.focus({ preventScroll: true });
+    });
+  }
 }
 
 function createEmptyState(title, body) {
