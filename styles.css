@@ -21,6 +21,7 @@
 body {
   margin: 0;
   min-height: 100vh;
+  padding-bottom: calc(7.5rem + env(safe-area-inset-bottom));
   color: var(--ink);
   font-family:
     "Aptos",
@@ -121,7 +122,7 @@ h2 {
   display: grid;
   gap: 1.1rem;
   width: min(1180px, calc(100% - 2rem));
-  margin: 0 auto 4rem;
+  margin: 0 auto 2rem;
 }
 
 .panel {
@@ -272,13 +273,6 @@ textarea {
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 1rem;
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  justify-content: flex-end;
 }
 
 button {
@@ -475,14 +469,65 @@ button:disabled {
   color: var(--ink);
 }
 
-@media (max-width: 820px) {
-  .hero,
-  .workspace-top {
-    grid-template-columns: 1fr;
-  }
+.sticky-save-bar {
+  position: fixed;
+  right: max(1rem, calc((100vw - 1180px) / 2));
+  bottom: max(0.9rem, env(safe-area-inset-bottom));
+  left: max(1rem, calc((100vw - 1180px) / 2));
+  z-index: 50;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(255, 252, 244, 0.95), rgba(235, 241, 231, 0.92)),
+    rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 70px rgba(15, 35, 24, 0.24);
+  backdrop-filter: blur(18px);
+  padding: 0.75rem;
+}
 
+.save-summary {
+  min-width: 0;
+  padding-left: 0.45rem;
+}
+
+.save-summary strong,
+.save-summary span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.save-summary strong {
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 950;
+}
+
+.save-summary span {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.save-actions {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.save-actions .primary {
+  min-width: 128px;
+}
+
+@media (max-width: 820px) {
   .hero {
     display: grid;
+    grid-template-columns: 1fr;
     padding-top: 2.3rem;
   }
 
@@ -497,13 +542,52 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 
-  .actions,
   .import-row {
     justify-content: stretch;
   }
 
-  .actions button,
   .secondary-file {
     width: 100%;
+  }
+
+  .sticky-save-bar {
+    right: 0.65rem;
+    bottom: max(0.65rem, env(safe-area-inset-bottom));
+    left: 0.65rem;
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+    border-radius: 24px;
+    padding: 0.7rem;
+  }
+
+  .save-summary {
+    padding: 0 0.2rem;
+  }
+
+  .save-actions {
+    display: grid;
+    grid-template-columns: 0.85fr 0.85fr 1.2fr;
+    gap: 0.45rem;
+  }
+
+  .save-actions button {
+    min-height: 48px;
+    padding-right: 0.55rem;
+    padding-left: 0.55rem;
+  }
+}
+
+@media (max-width: 430px) {
+  body {
+    padding-bottom: calc(9.4rem + env(safe-area-inset-bottom));
+  }
+
+  .save-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .save-actions .primary {
+    grid-column: 1 / -1;
+    min-width: 0;
   }
 }

@@ -73,11 +73,6 @@
             <h2 id="activeSourceTitle">No source truth loaded</h2>
             <p class="muted" id="activeSourceMeta">Choose a source truth file to begin.</p>
           </div>
-          <div class="actions">
-            <button class="ghost" id="copyMissingButton" type="button" disabled>Keep English for missing</button>
-            <button class="ghost" id="validateButton" type="button" disabled>Validate</button>
-            <button class="primary" id="exportButton" type="button" disabled>Export JSON</button>
-          </div>
         </div>
 
         <div class="stats-grid" aria-live="polite">
@@ -141,6 +136,18 @@
         <div class="row-issues"></div>
       </article>
     </template>
+
+    <footer class="sticky-save-bar" aria-label="Translation save actions">
+      <div class="save-summary">
+        <strong id="saveSummaryText">No source loaded</strong>
+        <span id="saveSummaryDetail">Choose a source truth file to begin.</span>
+      </div>
+      <div class="save-actions">
+        <button class="ghost" id="copyMissingButton" type="button" disabled>Keep English</button>
+        <button class="ghost" id="validateButton" type="button" disabled>Validate</button>
+        <button class="primary" id="exportButton" type="button" disabled>Save JSON</button>
+      </div>
+    </footer>
 
     <script src="source_truth_bundle.js"></script>
     <script src="app.js"></script>

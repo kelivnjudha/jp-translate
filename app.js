@@ -34,6 +34,8 @@ function cacheElements() {
   els.copyMissingButton = document.getElementById("copyMissingButton");
   els.validateButton = document.getElementById("validateButton");
   els.exportButton = document.getElementById("exportButton");
+  els.saveSummaryText = document.getElementById("saveSummaryText");
+  els.saveSummaryDetail = document.getElementById("saveSummaryDetail");
   els.totalCount = document.getElementById("totalCount");
   els.translatedCount = document.getElementById("translatedCount");
   els.missingCount = document.getElementById("missingCount");
@@ -442,6 +444,11 @@ function updateStats() {
   els.missingCount.textContent = String(missing);
   els.issueCount.textContent = String(issues);
   els.progressPercent.textContent = `${percent}%`;
+  els.saveSummaryText.textContent = total === 0 ? "No source loaded" : `${translated}/${total} translated`;
+  els.saveSummaryDetail.textContent =
+    total === 0
+      ? "Choose a source truth file to begin."
+      : `${missing} missing · ${issues} issue${issues === 1 ? "" : "s"}`;
   updateActionState();
 }
 
