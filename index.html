@@ -72,6 +72,10 @@
             <p class="eyebrow">Current file</p>
             <h2 id="activeSourceTitle">No source truth loaded</h2>
             <p class="muted" id="activeSourceMeta">Choose a source truth file to begin.</p>
+            <div class="export-state" aria-live="polite">
+              <span class="export-state-badge" id="exportStateBadge">Not exported</span>
+              <span class="export-state-detail" id="exportStateDetail">Save JSON when this file is ready.</span>
+            </div>
           </div>
         </div>
 
@@ -87,6 +91,10 @@
           <div class="stat">
             <span id="missingCount">0</span>
             <small>Missing</small>
+          </div>
+          <div class="stat">
+            <span id="translatedWordsCount">0/0</span>
+            <small>Words done</small>
           </div>
           <div class="stat warning">
             <span id="issueCount">0</span>

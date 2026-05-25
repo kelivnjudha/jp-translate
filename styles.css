@@ -275,6 +275,50 @@ textarea {
   margin-bottom: 1rem;
 }
 
+.export-state {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.85rem;
+}
+
+.export-state-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 950;
+  padding: 0.34rem 0.72rem;
+}
+
+.export-state-badge.is-neutral {
+  background: rgba(23, 32, 24, 0.08);
+  color: var(--muted);
+}
+
+.export-state-badge.is-dirty {
+  background: rgba(184, 137, 59, 0.18);
+  color: #744b0d;
+}
+
+.export-state-badge.is-draft {
+  background: rgba(14, 108, 85, 0.1);
+  color: var(--jade-deep);
+}
+
+.export-state-badge.is-saved {
+  background: var(--jade);
+  color: white;
+}
+
+.export-state-detail {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
 button {
   min-height: 44px;
   border: 0;
@@ -314,7 +358,7 @@ button:disabled {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.75rem;
   margin-bottom: 1rem;
 }

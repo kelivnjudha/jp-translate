@@ -12,8 +12,13 @@ Confirmed production files should have:
 - status: "confirmed"
 - no missing translations
 - no placeholder validation issues
+- format: "jade-palace-ui-translations"
+- messages: plain key/value translations for app loading
 
 Do not place secrets or app credentials in translation files.
+
+Before using translations in production, run:
+node tools\validate-translated-json.mjs
 
 To make an existing file selectable in the translator website, add it to manifest.json.
 

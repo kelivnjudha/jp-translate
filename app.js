@@ -9,6 +9,7 @@ const state = {
   existingWorks: [],
   activeSourceId: "",
   translationsBySource: new Map(),
+  exportStateBySource: new Map(),
   search: "",
   filter: "all",
 };
@@ -31,6 +32,8 @@ function cacheElements() {
   els.loadExistingWorkButton = document.getElementById("loadExistingWorkButton");
   els.activeSourceTitle = document.getElementById("activeSourceTitle");
   els.activeSourceMeta = document.getElementById("activeSourceMeta");
+  els.exportStateBadge = document.getElementById("exportStateBadge");
+  els.exportStateDetail = document.getElementById("exportStateDetail");
   els.copyMissingButton = document.getElementById("copyMissingButton");
   els.validateButton = document.getElementById("validateButton");
   els.exportButton = document.getElementById("exportButton");
@@ -39,6 +42,7 @@ function cacheElements() {
   els.totalCount = document.getElementById("totalCount");
   els.translatedCount = document.getElementById("translatedCount");
   els.missingCount = document.getElementById("missingCount");
+  els.translatedWordsCount = document.getElementById("translatedWordsCount");
   els.issueCount = document.getElementById("issueCount");
   els.progressPercent = document.getElementById("progressPercent");
   els.searchInput = document.getElementById("searchInput");
@@ -49,7 +53,11 @@ function cacheElements() {
 }
 
 function bindEvents() {
-  els.languageInput.addEventListener("input", () => updateActionState());
+  els.languageInput.addEventListener("input", () => {
+    markActiveSourceDirty();
+    updateActionState();
+  });
+  els.translatorNoteInput.addEventListener("input", markActiveSourceDirty);
   els.existingWorkSelect.addEventListener("change", () => updateActionState());
   els.loadExistingWorkButton.addEventListener("click", loadSelectedExistingWork);
   els.searchInput.addEventListener("input", () => {
@@ -198,6 +206,15 @@ function addSourceText(fileName, text, label = fileName) {
   if (!state.translationsBySource.has(id)) {
     state.translationsBySource.set(id, new Map());
   }
+  if (!state.exportStateBySource.has(id)) {
+    state.exportStateBySource.set(id, {
+      dirty: false,
+      lastFileName: "",
+      lastStatus: "",
+      lastSavedAt: "",
+      source: "fresh",
+    });
+  }
   setActiveSource(id);
   return id;
 }
@@ -276,6 +293,7 @@ function setActiveSource(id) {
   renderActiveSourceHeader();
   renderTranslationList();
   updateStats();
+  updateExportStateUI();
   updateActionState();
 }
 
@@ -289,6 +307,101 @@ function getActiveTranslations() {
     state.translationsBySource.set(state.activeSourceId, new Map());
   }
   return state.translationsBySource.get(state.activeSourceId);
+}
+
+function getActiveExportState() {
+  if (!state.activeSourceId) {
+    return {
+      dirty: false,
+      lastFileName: "",
+      lastStatus: "",
+      lastSavedAt: "",
+      source: "none",
+    };
+  }
+
+  if (!state.exportStateBySource.has(state.activeSourceId)) {
+    state.exportStateBySource.set(state.activeSourceId, {
+      dirty: false,
+      lastFileName: "",
+      lastStatus: "",
+      lastSavedAt: "",
+      source: "fresh",
+    });
+  }
+
+  return state.exportStateBySource.get(state.activeSourceId);
+}
+
+function markActiveSourceDirty() {
+  if (!state.activeSourceId) return;
+  const exportState = getActiveExportState();
+  exportState.dirty = true;
+  updateExportStateUI();
+}
+
+function markActiveSourceLoadedExisting(fileName, status) {
+  if (!state.activeSourceId) return;
+  state.exportStateBySource.set(state.activeSourceId, {
+    dirty: false,
+    lastFileName: fileName,
+    lastStatus: status || "loaded",
+    lastSavedAt: "",
+    source: "existing",
+  });
+  updateExportStateUI();
+}
+
+function markActiveSourceExported(fileName, status) {
+  if (!state.activeSourceId) return;
+  state.exportStateBySource.set(state.activeSourceId, {
+    dirty: false,
+    lastFileName: fileName,
+    lastStatus: status || "draft",
+    lastSavedAt: new Date().toISOString(),
+    source: "exported",
+  });
+  updateExportStateUI();
+}
+
+function updateExportStateUI() {
+  if (!els.exportStateBadge || !els.exportStateDetail) return;
+  const source = getActiveSource();
+  const exportState = getActiveExportState();
+
+  els.exportStateBadge.className = "export-state-badge";
+
+  if (!source) {
+    els.exportStateBadge.textContent = "Not exported";
+    els.exportStateBadge.classList.add("is-neutral");
+    els.exportStateDetail.textContent = "Choose a source truth file to begin.";
+    return;
+  }
+
+  if (exportState.dirty && exportState.lastFileName) {
+    els.exportStateBadge.textContent = "Unsaved changes";
+    els.exportStateBadge.classList.add("is-dirty");
+    els.exportStateDetail.textContent = `Last JSON: ${exportState.lastFileName}. Save again before production use.`;
+    return;
+  }
+
+  if (exportState.dirty) {
+    els.exportStateBadge.textContent = "Not saved";
+    els.exportStateBadge.classList.add("is-dirty");
+    els.exportStateDetail.textContent = "This file has changes that have not been exported to JSON.";
+    return;
+  }
+
+  if (exportState.lastFileName) {
+    els.exportStateBadge.textContent = exportState.lastStatus === "confirmed" ? "Exported JSON" : "Draft JSON";
+    els.exportStateBadge.classList.add(exportState.lastStatus === "confirmed" ? "is-saved" : "is-draft");
+    els.exportStateDetail.textContent = `${exportState.lastFileName} is loaded/saved for this source truth.`;
+    return;
+  }
+
+  els.exportStateBadge.textContent = "Not exported";
+  els.exportStateBadge.classList.add("is-neutral");
+  els.exportStateDetail.textContent = "Save JSON when this file is ready.";
 }
 
 function renderActiveSourceHeader() {
@@ -349,12 +462,14 @@ function createTranslationRow(item) {
 
   textarea.addEventListener("input", () => {
     translations.set(item.key, textarea.value);
+    markActiveSourceDirty();
     updateRowState(row, item);
     updateStats();
   });
 
   keepButton.addEventListener("click", () => {
     translations.set(item.key, item.source);
+    markActiveSourceDirty();
     textarea.value = item.source;
     updateRowState(row, item);
     updateStats();
@@ -362,6 +477,7 @@ function createTranslationRow(item) {
 
   clearButton.addEventListener("click", () => {
     translations.delete(item.key);
+    markActiveSourceDirty();
     textarea.value = "";
     updateRowState(row, item);
     updateStats();
@@ -437,18 +553,25 @@ function updateStats() {
   const translated = analyses.filter((item) => !item.missing).length;
   const missing = total - translated;
   const issues = analyses.filter((item) => item.issues.length > 0).length;
+  const totalWords = items.reduce((sum, item) => sum + countSourceWords(item.source), 0);
+  const translatedWords = items.reduce((sum, item) => {
+    const analysis = analyzeItem(item);
+    return analysis.missing ? sum : sum + countSourceWords(item.source);
+  }, 0);
   const percent = total === 0 ? 0 : Math.round((translated / total) * 100);
 
   els.totalCount.textContent = String(total);
   els.translatedCount.textContent = String(translated);
   els.missingCount.textContent = String(missing);
+  els.translatedWordsCount.textContent = `${translatedWords}/${totalWords}`;
   els.issueCount.textContent = String(issues);
   els.progressPercent.textContent = `${percent}%`;
-  els.saveSummaryText.textContent = total === 0 ? "No source loaded" : `${translated}/${total} translated`;
+  els.saveSummaryText.textContent = total === 0 ? "No source loaded" : `${translated}/${total} phrases`;
   els.saveSummaryDetail.textContent =
     total === 0
       ? "Choose a source truth file to begin."
-      : `${missing} missing · ${issues} issue${issues === 1 ? "" : "s"}`;
+      : `${translatedWords}/${totalWords} words · ${missing} missing · ${issues} issue${issues === 1 ? "" : "s"}`;
+  updateExportStateUI();
   updateActionState();
 }
 
@@ -547,7 +670,12 @@ async function loadExistingWorkPayload(imported, selectedName) {
     }
   }
 
-  const translations = imported.translations && typeof imported.translations === "object" ? imported.translations : imported;
+  const translations =
+    imported.messages && typeof imported.messages === "object"
+      ? imported.messages
+      : imported.translations && typeof imported.translations === "object"
+        ? imported.translations
+        : imported;
   const result = importTranslationMap(translations);
 
   if (typeof imported.language === "string" && imported.language.trim()) {
@@ -556,6 +684,7 @@ async function loadExistingWorkPayload(imported, selectedName) {
   if (typeof imported.translatorNote === "string" && imported.translatorNote.trim()) {
     els.translatorNoteInput.value = imported.translatorNote.trim();
   }
+  markActiveSourceLoadedExisting(selectedName, imported.status || "loaded");
 
   const source = getActiveSource();
   const sourceHashWarning =
@@ -605,6 +734,9 @@ function copyEnglishForMissing() {
     }
   });
 
+  if (copied > 0) {
+    markActiveSourceDirty();
+  }
   renderTranslationList();
   updateStats();
   showMessage("info", `Kept English for ${copied} missing line${copied === 1 ? "" : "s"}.`);
@@ -623,6 +755,8 @@ function validateActiveSource() {
 
   if (!language) {
     errors.push("Enter a language code before exporting.");
+  } else if (!/^[a-z]{2,3}(-[a-z0-9]{2,8})?$/i.test(language)) {
+    errors.push("Use a valid language code such as th, zh, ja, en, or pt-BR.");
   }
 
   if (source.duplicateKeys.length > 0) {
@@ -694,8 +828,13 @@ function exportActiveJson() {
 
   const language = getLanguageCode();
   const translatedCount = Object.keys(outputTranslations).length;
+  const totalWordCount = source.items.reduce((sum, item) => sum + countSourceWords(item.source), 0);
+  const translatedWordCount = source.items.reduce((sum, item) => {
+    return outputTranslations[item.key] ? sum + countSourceWords(item.source) : sum;
+  }, 0);
   const payload = {
     schemaVersion: 1,
+    format: "jade-palace-ui-translations",
     language,
     sourceLocale: SOURCE_LOCALE,
     sourceFile: source.fileName,
@@ -707,19 +846,38 @@ function exportActiveJson() {
       total: source.items.length,
       translated: translatedCount,
       missing: source.items.length - translatedCount,
+      sourceWordsTotal: totalWordCount,
+      sourceWordsTranslated: translatedWordCount,
       issues: validation.issueCount,
     },
+    messages: outputTranslations,
     translations: outputTranslations,
   };
 
   const json = `${JSON.stringify(payload, null, 2)}\n`;
   const fileName = `${stripExtension(source.fileName)}.${language}.json`;
   downloadTextFile(fileName, json, "application/json");
-  showMessage("info", `Exported ${fileName}. Save confirmed files in translated_json/JSON.`);
+  markActiveSourceExported(fileName, payload.status);
+  showMessage("info", `Saved ${fileName}. This JSON is ready for Jade Palace UI loaders via the messages/translations key map.`, {
+    reveal: true,
+  });
 }
 
 function getLanguageCode() {
   return els.languageInput.value.trim().toLowerCase();
+}
+
+function countSourceWords(text) {
+  const normalized = String(text || "")
+    .replace(/\{[a-zA-Z0-9_]+\}/g, " placeholder ")
+    .trim();
+
+  if (!normalized) return 0;
+
+  const matches =
+    normalized.match(/[A-Za-z0-9]+(?:[-'][A-Za-z0-9]+)?|[\u0E00-\u0E7F]+|[\u3400-\u9FFF]/g) || [];
+
+  return matches.length || 1;
 }
 
 function getPlaceholders(text) {
